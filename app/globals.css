@@ -8,20 +8,33 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway.ttf');
+}
+
+@font-face {
+  font-family: 'OhnoBlazeface';
+  src: url('../fonts/OhnoBlazeface-18Point.ttf');
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+  overflow: overlay;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  height: auto;
+  background-color: rgb(95, 95, 95);
+  border-radius: 5px;
 }
