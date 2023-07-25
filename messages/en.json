@@ -1,0 +1,10 @@
+{
+  "Navbar": {
+    "digital-design": "Digital Design",
+    "graphic-design": "Graphic Design",
+    "editorial-design": "Editorial Design",
+    "brand-identity": "Brand Identity",
+    "about-me": "About Me",
+    "contact-me": "Contact Me"
+  }
+}

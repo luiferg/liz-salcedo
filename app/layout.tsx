@@ -1,4 +1,6 @@
-import { Navbar } from '@/components'
+'use client'
+import { MobileNavbar, Navbar } from '@/components'
+import { useEffect, useState } from 'react'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -12,10 +14,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    if (typeof window !== 'undefined') {
+      handleResize() // Initial check
+      window.addEventListener('resize', handleResize) // Listen for resize events
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize) // Clean up the listener
+      }
+    }
+  }, [])
+
   return (
-    <html lang='en'>
+    <html lang='es'>
       <body className='overflow-x-hidden overflow-y-scroll font-primary'>
-        <Navbar />
+        {isMobile ? <MobileNavbar /> : <Navbar />}
         {children}
       </body>
     </html>
