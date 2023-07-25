@@ -44,15 +44,15 @@ const PageContainer = () => {
           style={{ x: spring }}
           className='relative h-screen w-[94vw] flex items-center'
         >
-          <div className='relative flex h-full'>
-            <div className='h-full w-[100vw] relative flex'>
+          <div className='flex h-full'>
+            <div className='h-full w-[100vw] relative'>
               <div className='h-full w-full'>
                 <Image
                   src='/aguda-navaja.webp'
                   fill
                   unoptimized={true}
                   alt='aguda navaja'
-                  className='h-full w-full'
+                  className='object-left object-cover'
                 />
               </div>
             </div>

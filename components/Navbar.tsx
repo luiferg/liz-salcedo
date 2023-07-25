@@ -1,22 +1,25 @@
 'use client'
 import Image from 'next/image'
-import { useState } from 'react'
-import { AnimatePresence, animate, motion } from 'framer-motion'
-import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
+import { useCallback, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { RxHamburgerMenu, RxCross1, RxArrowRight } from 'react-icons/rx'
 import Link from 'next/link'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [src, setSrc] = useState('')
-  const openMenu = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const menuSpan =
+    'block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white'
+  const openMenu = useCallback(() => {
     setIsOpen(true)
     document.body.style.overflowY = 'hidden'
-  }
+  }, [])
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setIsOpen(false)
     document.body.style.overflowY = 'auto'
-  }
+  }, [])
 
   return (
     <header>
@@ -123,7 +126,7 @@ const Navbar = () => {
                     delay: 0.2,
                   },
                 }}
-                className='fixed h-screen w-[50vw] z-20 bg-blue-400 p-10'
+                className='fixed h-screen w-[50vw] z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)]'
               >
                 <div>
                   <Link href='/'>
@@ -141,37 +144,236 @@ const Navbar = () => {
                       <li>
                         <Link
                           href='/'
-                          onMouseEnter={() =>
+                          onMouseEnter={() => {
                             setSrc(
                               '/menu-highlights/industrialbox-highlight.jpg'
                             )
-                          }
-                          onMouseLeave={() => setSrc('')}
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
                           className='group max-w-fit inline-block'
                         >
                           IndustrialBOX
-                          <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white'></span>
+                          <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/gopass-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
                           Gopass
-                          <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white'></span>
+                          <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/aurora-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
                           Aurora
-                          <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white'></span>
+                          <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/compensar-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
                           Compensar
-                          <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white'></span>
+                          <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                     </ul>
+                  </div>
+                  <div className='text-white'>
+                    <h3 className='text-2xl font-bold'>Diseño Web</h3>
+                    <ul className='list-none text-xl'>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/teaspoon-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          Teaspoon
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/leaobranco-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          Leao Branco
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/tonaypepo-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          Toña y Pepo
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='text-white'>
+                    <h3 className='text-2xl font-bold'>Diseño Editorial</h3>
+                    <ul className='list-none text-xl gap-1'>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/agudanavaja-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          La Aguda Navaja de Algo que No Era Amor
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/coronagoyn-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          Corona Goyn
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/aptuno-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          Aptuno
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='text-white'>
+                    <h3 className='text-2xl font-bold'>Identidad de Marca</h3>
+                    <ul className='list-none text-xl gap-1'>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc('/menu-highlights/Bumbox-highlight.jpg')
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          BumBox
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/'
+                          onMouseEnter={() => {
+                            setSrc(
+                              '/menu-highlights/arbitramentos-highlight.jpg'
+                            )
+                            setIsVisible(true)
+                          }}
+                          onMouseLeave={() => {
+                            setSrc('')
+                            setIsVisible(false)
+                          }}
+                          className='group max-w-fit inline-block'
+                        >
+                          Arbitramentos
+                          <span className={`${menuSpan}`}></span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='text-white flex flex-row items-center gap-1 group'>
+                    <h3 className='text-2xl font-bold'>
+                      <Link href='/' className='group max-w-fit inline-block'>
+                        Sobre Mí
+                        <span className={`${menuSpan}`}></span>
+                      </Link>
+                    </h3>
+                    <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
                   </div>
                 </div>
                 <motion.button
@@ -206,13 +408,15 @@ const Navbar = () => {
               className='fixed w-screen h-screen bg-blue-400 bg-opacity-20 backdrop-blur-sm z-[8]'
             >
               <div id='projects' className='absolute flex right-0 w-1/2 h-full'>
-                <Image
-                  src={src}
-                  fill
-                  className='object-left object-cover'
-                  unoptimized={true}
-                  alt=''
-                />
+                {isVisible && (
+                  <Image
+                    src={src}
+                    fill
+                    className='object-left object-cover'
+                    unoptimized={true}
+                    alt=''
+                  />
+                )}
               </div>
             </motion.div>
           </motion.div>
