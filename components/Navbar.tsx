@@ -376,6 +376,16 @@ const Navbar = () => {
                     <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
                   </div>
                 </div>
+                <div className='text-white flex flex-row items-center gap-1 group'>
+                    <h3 className='text-2xl font-bold'>
+                      <Link href='/' className='group max-w-fit inline-block'>
+                        Sobre Mí
+                        <span className={`${menuSpan}`}></span>
+                      </Link>
+                    </h3>
+                    <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
+                  </div>
+                </div>
                 <motion.button
                   initial={{ rotateZ: 200, scale: 0.5, opacity: 0 }}
                   whileInView={{
