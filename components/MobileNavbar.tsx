@@ -3,9 +3,10 @@ import Image from 'next/image'
 import { useCallback, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { RxHamburgerMenu, RxCross1, RxArrowRight } from 'react-icons/rx'
-import Link from 'next/link'
+import Link from 'next-intl/link'
+import { useTranslations } from 'next-intl'
 
-const Navbar = () => {
+const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const menuSpan =
     'block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white'
@@ -20,31 +21,37 @@ const Navbar = () => {
     document.body.style.overflowY = 'auto'
   }, [])
 
+  const t = useTranslations('Navbar')
+
   return (
     <header>
       <AnimatePresence>
         <nav className='fixed z-10'>
           <div className='bg-white w-screen lg:w-[6vw] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'>
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
-              <Image
-                src='/logo.svg'
-                priority
-                width={70}
-                height={70}
-                alt='Be Graphic logo'
-                className='static'
-              />
-              <motion.button
-                whileHover={{
-                  scale: 1.2,
-                  transition: { duration: 0.2, type: 'spring' },
-                }}
-                className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center'
-                onClick={openMenu}
-                type='button'
-              >
-                <RxHamburgerMenu className='text-white text-3xl' />
-              </motion.button>
+              <Link href='/'>
+                <Image
+                  src='/logo.svg'
+                  priority
+                  width={60}
+                  height={60}
+                  alt='Be Graphic logo'
+                  className='static'
+                />
+              </Link>
+              <div>
+                <motion.button
+                  whileTap={{
+                    scale: 0.9,
+                    transition: { duration: 0.2, type: 'spring' },
+                  }}
+                  className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center'
+                  onClick={openMenu}
+                  type='button'
+                >
+                  <RxHamburgerMenu className='text-white text-3xl' />
+                </motion.button>
+              </div>
             </div>
           </div>
         </nav>
@@ -120,7 +127,7 @@ const Navbar = () => {
                     delay: 0.2,
                   },
                 }}
-                className='fixed h-[100svh] w-screen z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)] flex flex-col justify-center'
+                className='fixed h-[100svh] w-screen z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)] flex flex-col justify-center font-primary'
               >
                 <div className='flex flex-col max-h-[100svh] flex-wrap gap-1'>
                   <Link href='/'>
@@ -133,7 +140,7 @@ const Navbar = () => {
                     />
                   </Link>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>Diseño Digital</h3>
+                    <h3 className='text-xl font-bold'>{t('digital-design')}</h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link href='/' className='group max-w-fit inline-block'>
@@ -162,7 +169,7 @@ const Navbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>Diseño Web</h3>
+                    <h3 className='text-xl font-bold'>{t('graphic-design')}</h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link href='/' className='group max-w-fit inline-block'>
@@ -185,7 +192,9 @@ const Navbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>Diseño Editorial</h3>
+                    <h3 className='text-xl font-bold'>
+                      {t('editorial-design')}
+                    </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link href='/' className='group max-w-fit inline-block'>
@@ -208,7 +217,7 @@ const Navbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>Identidad de Marca</h3>
+                    <h3 className='text-xl font-bold'>{t('brand-identity')}</h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link href='/' className='group max-w-fit inline-block'>
@@ -227,7 +236,7 @@ const Navbar = () => {
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-xl font-bold'>
                       <Link href='/' className='group max-w-fit inline-block'>
-                        Sobre Mí
+                        {t('about-me')}
                         <span className={`${menuSpan}`}></span>
                       </Link>
                     </h3>
@@ -236,7 +245,7 @@ const Navbar = () => {
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-xl font-bold'>
                       <Link href='/' className='group max-w-fit inline-block'>
-                        Contacto
+                        {t('contact-me')}
                         <span className={`${menuSpan}`}></span>
                       </Link>
                     </h3>
@@ -273,4 +282,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default MobileNavbar

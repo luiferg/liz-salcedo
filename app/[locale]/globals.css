@@ -10,12 +10,12 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway.ttf');
+  src: url('../../fonts/Raleway.ttf');
 }
 
 @font-face {
   font-family: 'OhnoBlazeface';
-  src: url('../fonts/OhnoBlazeface-18Point.ttf');
+  src: url('../../fonts/OhnoBlazeface-18Point.ttf');
 }
 
 body {
