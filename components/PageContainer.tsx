@@ -45,8 +45,8 @@ const PageContainer = () => {
           className='relative h-screen w-[94vw] flex items-center'
         >
           <div className='flex h-full'>
-            <div className='h-full w-[100vw] relative'>
-              <div className='h-full w-full'>
+            <div className='h-full w-screen relative'>
+              <div className='h-full w-screen'>
                 <Image
                   src='/aguda-navaja.webp'
                   fill
@@ -56,11 +56,11 @@ const PageContainer = () => {
                 />
               </div>
             </div>
-            <div className='h-full w-[94vw] bg-yellow' />
-            <div className='h-full w-[94vw] bg-blue' />
-            <div className='h-full w-[94vw] bg-pink' />
-            <div className='h-full w-[94vw] bg-blue' />
-            <div className='h-full w-[94vw] bg-black' />
+            <div className='h-full w-screen bg-yellow' />
+            <div className='h-full w-screen bg-blue' />
+            <div className='h-full w-screen bg-pink' />
+            <div className='h-full w-screen bg-blue' />
+            <div className='h-full w-screen bg-black' />
           </div>
         </motion.section>
       </div>
