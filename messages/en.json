@@ -10,5 +10,12 @@
     "brand-identity": "Brand Identity",
     "about-me": "About Me",
     "contact-me": "Contact Me"
+  },
+  "Home": {
+    "greetings": "Hi I'm",
+    "name": "Liz Salcedo!",
+    "introduction-1": "A Colombian graphic designer living in Spain. ",
+    "introduction-2": "For me it has always been important to find different and creative ways to communicate, and this space was born for that reason; to be a fun and dynamic portfolio where you can get to know my projects.",
+    "welcome": "Welcome to Be-Graphic, I hope we can work together."
   }
 }

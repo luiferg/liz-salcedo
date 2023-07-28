@@ -3,8 +3,9 @@ import Image from 'next/image'
 import { useCallback, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { RxHamburgerMenu, RxCross1, RxArrowRight } from 'react-icons/rx'
-import Link from 'next-intl/link'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { LanguageSwitcher } from '.'
 
 const DesktopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,15 +48,7 @@ const DesktopNavbar = () => {
                 />
               </Link>
               <div className='flex flex-col justify-center items-center gap-4'>
-                <div className='flex justify-between gap-3 font-primary font-semibold font-lg text-blue-400'>
-                  <Link href='/' locale='es'>
-                    ES
-                  </Link>
-                  |
-                  <Link href='/' locale='en'>
-                    EN
-                  </Link>
-                </div>
+                <LanguageSwitcher />
                 <motion.button
                   whileHover={{
                     scale: 1.1,
@@ -169,7 +162,7 @@ const DesktopNavbar = () => {
                           href='/'
                           onMouseEnter={() => {
                             setSrc(
-                              '/menu-highlights/industrialbox-highlight.jpg'
+                              '/menu-highlights/industrialbox-highlight.webp'
                             )
                             setIsVisible(true)
                           }}
@@ -187,7 +180,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/gopass-highlight.jpg')
+                            setSrc('/menu-highlights/gopass-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -204,7 +197,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/aurora-highlight.jpg')
+                            setSrc('/menu-highlights/aurora-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -221,7 +214,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/compensar-highlight.jpg')
+                            setSrc('/menu-highlights/compensar-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -245,7 +238,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/teaspoon-highlight.jpg')
+                            setSrc('/menu-highlights/teaspoon-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -262,7 +255,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/leaobranco-highlight.jpg')
+                            setSrc('/menu-highlights/leaobranco-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -279,7 +272,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/tonaypepo-highlight.jpg')
+                            setSrc('/menu-highlights/tonaypepo-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -303,7 +296,9 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/agudanavaja-highlight.jpg')
+                            setSrc(
+                              '/menu-highlights/agudanavaja-highlight.webp'
+                            )
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -320,7 +315,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/coronagoyn-highlight.jpg')
+                            setSrc('/menu-highlights/coronagoyn-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -337,7 +332,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/aptuno-highlight.jpg')
+                            setSrc('/menu-highlights/aptuno-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -361,7 +356,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/Bumbox-highlight.jpg')
+                            setSrc('/menu-highlights/Bumbox-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
@@ -379,7 +374,7 @@ const DesktopNavbar = () => {
                           href='/'
                           onMouseEnter={() => {
                             setSrc(
-                              '/menu-highlights/arbitramentos-highlight.jpg'
+                              '/menu-highlights/arbitramentos-highlight.webp'
                             )
                             setIsVisible(true)
                           }}

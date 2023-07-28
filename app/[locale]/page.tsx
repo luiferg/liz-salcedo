@@ -1,9 +1,9 @@
-import { PageContainer } from '@/components'
+import { HomePage } from '@/components'
 
 export default function Home() {
   return (
     <main className=''>
-      <PageContainer />
+      <HomePage />
     </main>
   )
 }

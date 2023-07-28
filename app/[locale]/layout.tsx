@@ -1,8 +1,8 @@
-import Navbar from '@/components/Navbar'
 import './globals.css'
 import { NextIntlClientProvider, createTranslator } from 'next-intl'
 import { notFound } from 'next/navigation'
 import Head from 'next/head'
+import { Navbar } from '@/components'
 export function generateStaticParams() {
   return [{ locale: 'es' }, { locale: 'en' }]
 }

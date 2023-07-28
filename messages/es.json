@@ -10,5 +10,12 @@
     "brand-identity": "Identidad de Marca",
     "about-me": "Sobre Mí",
     "contact-me": "Contáctame"
+  },
+  "Home": {
+    "greetings": "¡Hola, soy",
+    "name": "Liz Salcedo!",
+    "introduction-1": "Una diseñadora gráfica colombiana viviendo en España. ",
+    "introduction-2": "Para mí siempre ha sido importante encontrar maneras diferentes y creativas de comunicarme, y este espacio nació por ese motivo; para ser un portafolio divertido y dinámico donde puedas conocer mis proyectos.",
+    "welcome": "Bienvenido a Be-Graphic, espero que podamos trabajar juntos."
   }
 }
