@@ -5,12 +5,13 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { RxHamburgerMenu, RxCross1, RxArrowRight } from 'react-icons/rx'
 import Link from 'next-intl/link'
 import { useTranslations } from 'next-intl'
+import { LanguageSwitcher } from '.'
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const menuSpan =
     'block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white'
-  const ulStyle = 'list-none text-base flex flex-col gap-[2px]'
+  const ulStyle = 'list-none text-base md:text-xl flex flex-col gap-[2px]'
   const openMenu = useCallback(() => {
     setIsOpen(true)
     document.body.style.overflowY = 'hidden'
@@ -26,9 +27,10 @@ const MobileNavbar = () => {
   return (
     <header>
       <AnimatePresence>
-        <nav className='fixed z-10'>
-          <div className='bg-white w-screen lg:w-[6vw] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'>
+        <nav className='visible lg:invisible sticky top-0 z-10'>
+          <div className='bg-white w-screen px-10 py-3'>
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
+              <LanguageSwitcher />
               <Link href='/'>
                 <Image
                   src='/logo.svg'
@@ -45,18 +47,18 @@ const MobileNavbar = () => {
                     scale: 0.9,
                     transition: { duration: 0.2, type: 'spring' },
                   }}
-                  className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center'
+                  className='h-12 w-12 bg-white rounded-full flex flex-col justify-center items-center'
                   onClick={openMenu}
                   type='button'
                 >
-                  <RxHamburgerMenu className='text-white text-3xl' />
+                  <RxHamburgerMenu className='text-blue-400 text-3xl' />
                 </motion.button>
               </div>
             </div>
           </div>
         </nav>
         {isOpen && (
-          <motion.div key='menuMobile'>
+          <motion.div key='menuMobile' className='absolute top-0 z-20'>
             <div>
               <motion.div
                 initial={{ x: -2000 }}
@@ -132,7 +134,7 @@ const MobileNavbar = () => {
                 <div className='flex flex-col max-h-[100svh] flex-wrap gap-1'>
                   <Link href='/'>
                     <Image
-                      src='white-logo.svg'
+                      src='/white-logo.svg'
                       height={100}
                       width={220}
                       alt='Be Graphic logo'
@@ -140,16 +142,26 @@ const MobileNavbar = () => {
                     />
                   </Link>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>{t('digital-design')}</h3>
+                    <h3 className='text-xl md:text-3xl font-bold'>
+                      {t('digital-design')}
+                    </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/industrialbox'
+                          className='group max-w-fit inline-block'
+                          onClick={closeMenu}
+                        >
                           IndustrialBOX
                           <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/gopass'
+                          className='group max-w-fit inline-block'
+                          onClick={closeMenu}
+                        >
                           Gopass
                           <span className={`${menuSpan}`}></span>
                         </Link>
@@ -169,7 +181,9 @@ const MobileNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>{t('graphic-design')}</h3>
+                    <h3 className='text-xl md:text-3xl font-bold'>
+                      {t('graphic-design')}
+                    </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link href='/' className='group max-w-fit inline-block'>
@@ -192,7 +206,7 @@ const MobileNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>
+                    <h3 className='text-xl md:text-3xl font-bold'>
                       {t('editorial-design')}
                     </h3>
                     <ul className={`${ulStyle}`}>
@@ -217,7 +231,9 @@ const MobileNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-xl font-bold'>{t('brand-identity')}</h3>
+                    <h3 className='text-xl md:text-3xl font-bold'>
+                      {t('brand-identity')}
+                    </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link href='/' className='group max-w-fit inline-block'>
@@ -234,7 +250,7 @@ const MobileNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
-                    <h3 className='text-xl font-bold'>
+                    <h3 className='text-xl md:text-3xl font-bold'>
                       <Link href='/' className='group max-w-fit inline-block'>
                         {t('about-me')}
                         <span className={`${menuSpan}`}></span>
@@ -243,7 +259,7 @@ const MobileNavbar = () => {
                     <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
-                    <h3 className='text-xl font-bold'>
+                    <h3 className='text-xl md:text-3xl font-bold'>
                       <Link href='/' className='group max-w-fit inline-block'>
                         {t('contact-me')}
                         <span className={`${menuSpan}`}></span>

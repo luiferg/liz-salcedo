@@ -26,7 +26,45 @@ const HomePage = () => {
   return (
     <div>
       {isMobile ? (
-        <div>is mobile</div>
+        <div className='visible lg:invisible'>
+          <div>
+            <Image
+              src='/aguda-navaja.webp'
+              height={1344}
+              width={756}
+              priority
+              unoptimized={true}
+              alt='aguda navaja be-graphic'
+              className='h-auto w-screen'
+            />
+          </div>
+          <div className='bg-white flex p-8 justify-center items-center'>
+            <div className='flex flex-col gap-2 w-90% md:w-[80%] text-center'>
+              <p className='font-secondary text-blue-400 text-3xl'>
+                {t('greetings')}
+                <br />
+                {t('name')}
+              </p>
+              <p className='font-primary text-black text-base'>
+                <b>{t('introduction-1')}</b>
+                {t('introduction-2')}
+              </p>
+              <p className='font-primary text-black text-base'>
+                <strong>{t('welcome')} </strong>
+              </p>
+            </div>
+          </div>
+          <div>
+            <Image
+              src='/gopass.webp'
+              height={1344}
+              width={756}
+              unoptimized={true}
+              alt='gopass be-graphic'
+              className='h-auto w-screen'
+            />
+          </div>
+        </div>
       ) : (
         <PageContainer>
           <div className='h-full w-screen relative'>
@@ -35,6 +73,7 @@ const HomePage = () => {
                 src='/aguda-navaja.webp'
                 fill
                 unoptimized={true}
+                priority
                 alt='aguda navaja be-graphic'
                 className='object-left object-cover'
               />

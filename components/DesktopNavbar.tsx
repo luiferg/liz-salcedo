@@ -29,13 +29,8 @@ const DesktopNavbar = () => {
   return (
     <header>
       <AnimatePresence>
-        <nav className='fixed z-10'>
-          <motion.div
-            initial={{ opacity: 0, x: -150 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, damping: 40 }}
-            className='bg-white w-screen lg:w-[6vw] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'
-          >
+        <nav className='invisible lg:visible fixed z-10 min-lg'>
+          <div className='bg-white w-screen lg:w-[6vw] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'>
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
               <Link href='/'>
                 <Image
@@ -66,10 +61,10 @@ const DesktopNavbar = () => {
                 </motion.button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </nav>
         {isOpen && (
-          <motion.div key='menu' className='flex flex-row'>
+          <motion.div key='menu' className='flex flex-row invisible lg:visible'>
             <div>
               <motion.div
                 initial={{ x: -2000 }}
@@ -145,7 +140,7 @@ const DesktopNavbar = () => {
                 <div className='flex flex-col h-full justify-center gap-2 2xl:gap-4'>
                   <Link href='/'>
                     <Image
-                      src='white-logo.svg'
+                      src='/white-logo.svg'
                       height={100}
                       width={220}
                       alt='Be Graphic logo'
@@ -159,7 +154,7 @@ const DesktopNavbar = () => {
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
-                          href='/'
+                          href='/industrialbox'
                           onMouseEnter={() => {
                             setSrc(
                               '/menu-highlights/industrialbox-highlight.webp'
@@ -170,6 +165,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           IndustrialBOX
@@ -178,7 +174,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/gopass'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/gopass-highlight.webp')
                             setIsVisible(true)
@@ -187,6 +183,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Gopass

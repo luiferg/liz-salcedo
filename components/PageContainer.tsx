@@ -31,7 +31,7 @@ const PageContainer = ({ children }) => {
   const spring = useSpring(transform, physics)
   return (
     <>
-      <div className='fixed left-0 right-0 will-change-transform'>
+      <div className='invisible lg:visible fixed left-0 right-0 will-change-transform'>
         <motion.section
           ref={scrollRef}
           style={{ x: spring }}
