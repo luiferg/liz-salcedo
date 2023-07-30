@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import ImageSlider from '@/components/ImageSlider'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -32,30 +33,79 @@ const page = () => {
     <div>
       {isMobile ? (
         <div className='visible lg:invisible'>
-          <div>
+          <div className='h-full w-screen relative'>
             <Image
               src='/digital-design/industrialbox-slide-1.webp'
               height={1344}
               width={756}
-              priority
               unoptimized={true}
+              priority
               alt='industrialbox be-graphic'
-              className='h-auto w-screen'
+              className='object-left object-cover'
             />
+            <div className='absolute bottom-2 flex flex-col justify-end font-primary text-[#000000]'>
+              <div className='pl-8'>
+                <div className='overflow-hidden'>
+                  <motion.h1
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
+                    className='text-3xl md:text-5xl font-bold'
+                  >
+                    {t('title')}
+                  </motion.h1>
+                </div>
+                <ul className='text-sm md:text-xl'>
+                  <li className='overflow-hidden py-[2px]'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                    >
+                      {t('li-1-1')}
+                      <b>{t('li-1-2')}</b>
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden py-[2px]'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.9 }}
+                    >
+                      {t('li-2-1')}
+                      <b>{t('li-2-2')}</b>
+                    </motion.p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className='bg-white flex p-8 justify-center items-center'>
             <div className='flex flex-col gap-2 w-90% md:w-[80%] text-center'>
-              <h2 className='font-secondary text-blue-400 text-3xl'>
-                {t('title')}
-              </h2>
-              <p className='font-primary text-black text-base'>
-                {t('description-1')}
-                <b>{t('description-2')}</b>
-                {t('description-3')}
-              </p>
-              <p className='font-primary text-black text-base'>
-                {t('description-4')}
-              </p>
+              <div className='overflow-hidden'>
+                <motion.h2
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.3, type: 'tween', delay: 1.3 }}
+                  className='font-secondary text-blue-400 text-3xl md:text-5xl'
+                >
+                  {t('title')}
+                </motion.h2>
+              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.6 }}
+              >
+                <p className='font-primary text-black text-sm md:text-xl'>
+                  {t('description-1')}
+                  <b>{t('description-2')}</b>
+                  {t('description-3')}
+                </p>
+                <p className='font-primary text-black text-sm md:text-xl'>
+                  {t('description-4')}
+                </p>
+              </motion.div>
             </div>
           </div>
           <div>
@@ -158,27 +208,8 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen relative'>
-            <div className='h-full w-screen'>
-              <Image
-                src='/digital-design/industrialbox-slide-2.webp'
-                fill
-                unoptimized={true}
-                alt='industrialbox-slide-2 be-graphic'
-                className='object-left object-cover'
-              />
-            </div>
-          </div>
-          <div className='h-full w-screen relative'>
-            <div className='h-full w-screen'>
-              <Image
-                src='/digital-design/industrialbox-slide-3.webp'
-                fill
-                unoptimized={true}
-                alt='industrialbox-slide-3 be-graphic'
-                className='object-left object-cover'
-              />
-            </div>
+          <div className='h-screen w-screen'>
+            <ImageSlider />
           </div>
         </PageContainer>
       )}

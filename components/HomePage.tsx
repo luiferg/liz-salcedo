@@ -40,16 +40,16 @@ const HomePage = () => {
           </div>
           <div className='bg-white flex p-8 justify-center items-center'>
             <div className='flex flex-col gap-2 w-90% md:w-[80%] text-center'>
-              <p className='font-secondary text-blue-400 text-3xl'>
+              <p className='font-secondary text-blue-400 text-3xl md:text-5xl'>
                 {t('greetings')}
                 <br />
                 {t('name')}
               </p>
-              <p className='font-primary text-black text-base'>
+              <p className='font-primary text-black text-sm md:text-xl'>
                 <b>{t('introduction-1')}</b>
                 {t('introduction-2')}
               </p>
-              <p className='font-primary text-black text-base'>
+              <p className='font-primary text-black text-sm md:text-xl'>
                 <strong>{t('welcome')} </strong>
               </p>
             </div>
