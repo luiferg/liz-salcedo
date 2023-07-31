@@ -1,16 +1,27 @@
 'use client'
-import Link from 'next-intl/link'
+import { useRouter, usePathname } from 'next-intl/client'
 
 const LanguageSwitcher = () => {
+  const router = useRouter()
+  const pathname = usePathname()
+
   return (
     <div className='flex justify-between gap-3 font-primary font-semibold font-lg text-blue-400'>
-      <Link href='/' locale='es'>
+      <button
+        onClick={() => {
+          router.push(pathname, { locale: 'es' })
+        }}
+      >
         ES
-      </Link>
+      </button>
       |
-      <Link href='/' locale='en'>
+      <button
+        onClick={() => {
+          router.push(pathname, { locale: 'en' })
+        }}
+      >
         EN
-      </Link>
+      </button>
     </div>
   )
 }
