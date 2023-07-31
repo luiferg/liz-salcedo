@@ -4,6 +4,8 @@ import MobileNavbar from './MobileNavbar'
 import Navbar from './Navbar'
 import HomePage from './HomePage'
 import LanguageSwitcher from './LanguageSwitcher'
+import ImageSlider from './ImageSlider'
+import Footer from './Footer'
 
 export {
   DesktopNavbar,
@@ -12,4 +14,6 @@ export {
   Navbar,
   HomePage,
   LanguageSwitcher,
+  ImageSlider,
+  Footer,
 }

@@ -1,16 +1,24 @@
 'use client'
-import { PageContainer } from '@/components'
+import { ImageSlider, PageContainer } from '@/components'
 import { useTranslations } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import ImageSlider from '@/components/ImageSlider'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
   const t = useTranslations('Industrialbox')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+
+  const images = [
+    {
+      src: '/digital-design/industrialbox-slide-2.webp',
+    },
+    {
+      src: '/digital-design/industrialbox-slide-3.webp',
+    },
+  ]
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,8 +44,8 @@ const page = () => {
           <div className='h-full w-screen relative'>
             <Image
               src='/digital-design/industrialbox-slide-1.webp'
-              height={1344}
-              width={756}
+              height={756}
+              width={1344}
               unoptimized={true}
               priority
               alt='industrialbox be-graphic'
@@ -108,25 +116,8 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div>
-            <Image
-              src='/digital-design/industrialbox-slide-2.webp'
-              height={1344}
-              width={756}
-              unoptimized={true}
-              alt='industrialbox-slide-2 be-graphic'
-              className='h-auto w-screen'
-            />
-          </div>
-          <div>
-            <Image
-              src='/digital-design/industrialbox-slide-3.webp'
-              height={1344}
-              width={756}
-              unoptimized={true}
-              alt='industrialbox-slide-3 be-graphic'
-              className='h-auto w-screen'
-            />
+          <div className='aspect-video w-screen relative flex'>
+            <ImageSlider images={images} />
           </div>
         </div>
       ) : (
@@ -186,7 +177,7 @@ const page = () => {
                 <motion.h2
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : ''}
-                  transition={{ durantion: 0.3, type: 'tween', delay: 0.8 }}
+                  transition={{ duration: 0.3, type: 'tween', delay: 0.8 }}
                   className='font-secondary text-blue-400 text-7xl'
                 >
                   {t('title')}
@@ -208,8 +199,8 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-screen w-screen'>
-            <ImageSlider />
+          <div className='bg-white h-auto lg:h-screen w-screen relative flex justify-center items-center'>
+            <ImageSlider images={images} />
           </div>
         </PageContainer>
       )}

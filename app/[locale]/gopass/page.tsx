@@ -1,7 +1,12 @@
+import ImageSlider from '@/components/ImageSlider'
 import React from 'react'
 
 const page = () => {
-  return <div>GOPASS</div>
+  return (
+    <div>
+      <ImageSlider />
+    </div>
+  )
 }
 
 export default page

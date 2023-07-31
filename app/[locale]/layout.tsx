@@ -2,7 +2,7 @@ import './globals.css'
 import { NextIntlClientProvider, createTranslator } from 'next-intl'
 import { notFound } from 'next/navigation'
 import Head from 'next/head'
-import { Navbar } from '@/components'
+import { Footer, Navbar } from '@/components'
 export function generateStaticParams() {
   return [{ locale: 'es' }, { locale: 'en' }]
 }
@@ -34,6 +34,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
