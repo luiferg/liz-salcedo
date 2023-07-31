@@ -187,6 +187,7 @@ const page = () => {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : ''}
                 transition={{ durantion: 0.5, delay: 1.2 }}
+                className='flex flex-col gap-6'
               >
                 <p className='font-primary text-black text-2xl'>
                   {t('description-1')}
@@ -199,7 +200,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='bg-white h-auto lg:h-screen w-screen relative flex justify-center items-center'>
+          <div className='bg-white h-auto w-screen relative flex justify-center items-center'>
             <ImageSlider images={images} />
           </div>
         </PageContainer>
