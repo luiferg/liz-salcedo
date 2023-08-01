@@ -167,7 +167,11 @@ const MobileNavbar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/aurora'
+                          className='group max-w-fit inline-block'
+                          onClick={closeMenu}
+                        >
                           Aurora
                           <span className={`${menuSpan}`}></span>
                         </Link>

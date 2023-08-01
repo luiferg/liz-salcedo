@@ -192,7 +192,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/aurora'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/aurora-highlight.webp')
                             setIsVisible(true)
@@ -201,6 +201,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Aurora

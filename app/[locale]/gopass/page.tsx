@@ -1,6 +1,6 @@
 'use client'
 import { ImageSlider, PageContainer } from '@/components'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
@@ -10,6 +10,8 @@ const page = () => {
   const t = useTranslations('Gopass')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+
+  const locale = useLocale()
 
   const images = [
     {
@@ -40,7 +42,12 @@ const page = () => {
   return (
     <div>
       {isMobile ? (
-        <div className='visible lg:invisible'>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, type: 'tween' }}
+          className='visible lg:invisible'
+        >
           <div className='h-full w-screen relative'>
             <Image
               src='/digital-design/gopass-slide-1.webp'
@@ -52,7 +59,7 @@ const page = () => {
               className='object-left object-cover'
             />
             <div className='absolute bottom-2 flex flex-col justify-end font-primary text-white'>
-              <div className='pl-8'>
+              <div className='pl-8 pb-4 sm:pb-8'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -75,8 +82,17 @@ const page = () => {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
                     >
-                      {t('li-1-1')}
-                      <b className='italic text-[#00e700]'>{t('li-1-2')}</b>
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-1-1')}
+                          <b className='italic text-[#00e700]'>{t('li-1-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#00e700]'>{t('li-1-1')}</b>
+                          {t('li-1-2')}
+                        </>
+                      )}
                     </motion.p>
                   </li>
                 </ul>
@@ -114,7 +130,7 @@ const page = () => {
           <div className='aspect-video w-screen relative flex'>
             <ImageSlider images={images} />
           </div>
-        </div>
+        </motion.div>
       ) : (
         <PageContainer>
           <div className='h-full w-screen relative'>
@@ -143,15 +159,24 @@ const page = () => {
                     />
                   </motion.div>
                 </div>
-                <ul className='text-5xl'>
+                <ul className='text-4xl 2xl:text-5xl'>
                   <li className='overflow-hidden py-1'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
                     >
-                      {t('li-1-1')}
-                      <b className='italic text-[#00e700]'>{t('li-1-2')}</b>
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-1-1')}
+                          <b className='italic text-[#00e700]'>{t('li-1-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#00e700]'>{t('li-1-1')}</b>
+                          {t('li-1-2')}
+                        </>
+                      )}
                     </motion.p>
                   </li>
                 </ul>

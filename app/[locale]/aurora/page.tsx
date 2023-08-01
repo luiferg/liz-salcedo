@@ -1,24 +1,16 @@
 'use client'
-import { ImageSlider, PageContainer } from '@/components'
-import { useTranslations } from 'next-intl'
+import { PageContainer } from '@/components'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
-  const t = useTranslations('Industrialbox')
+  const t = useTranslations('Aurora')
+  const locale = useLocale()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-
-  const images = [
-    {
-      src: '/digital-design/industrialbox-slide-2.webp',
-    },
-    {
-      src: '/digital-design/industrialbox-slide-3.webp',
-    },
-  ]
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,25 +40,30 @@ const page = () => {
         >
           <div className='h-full w-screen relative'>
             <Image
-              src='/digital-design/industrialbox-slide-1.webp'
+              src='/digital-design/aurora-slide-1.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='industrialbox be-graphic'
+              alt='aurora be-graphic'
               className='object-left object-cover'
             />
-            <div className='absolute bottom-2 flex flex-col justify-end font-primary text-[#000000]'>
+            <div className='absolute top-10 md:top-[30%] right-2 md:right-[5%] flex flex-col gap-2 justify-end font-primary text-white'>
               <div className='pl-8'>
                 <div className='overflow-hidden'>
-                  <motion.h1
+                  <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
-                    className='text-3xl md:text-5xl font-bold'
                   >
-                    {t('title')}
-                  </motion.h1>
+                    <Image
+                      src={'/digital-design/aurora-logo.svg'}
+                      width={300}
+                      height={100}
+                      alt='aurora-logo be-graphic'
+                      className='h-8 md:h-14 w-auto'
+                    />
+                  </motion.div>
                 </div>
                 <ul className='text-sm md:text-xl'>
                   <li className='overflow-hidden py-[2px]'>
@@ -75,8 +72,17 @@ const page = () => {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
                     >
-                      {t('li-1-1')}
-                      <b>{t('li-1-2')}</b>
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-1-1')}
+                          <b className='italic text-[#7fd7c3]'>{t('li-1-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#7fd7c3]'>{t('li-1-1')}</b>
+                          {t('li-1-2')}
+                        </>
+                      )}
                     </motion.p>
                   </li>
                   <li className='overflow-hidden py-[2px]'>
@@ -85,8 +91,36 @@ const page = () => {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.9 }}
                     >
-                      {t('li-2-1')}
-                      <b>{t('li-2-2')}</b>
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-2-1')}
+                          <b className='italic text-[#7fd7c3]'>{t('li-2-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#7fd7c3]'>{t('li-2-1')}</b>
+                          {t('li-2-2')}
+                        </>
+                      )}
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden py-[2px]'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 1.2 }}
+                    >
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-3-1')}
+                          <b className='italic text-[#7fd7c3]'>{t('li-3-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#7fd7c3]'>{t('li-3-1')}</b>
+                          {t('li-3-2')}
+                        </>
+                      )}
                     </motion.p>
                   </li>
                 </ul>
@@ -100,7 +134,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.3, type: 'tween', delay: 1.3 }}
-                  className='font-secondary text-blue-400 text-3xl md:text-5xl'
+                  className='font-secondary text-pink text-3xl md:text-5xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -121,32 +155,45 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='aspect-video w-screen relative flex'>
-            <ImageSlider images={images} />
+          <div className='h-full w-screen relative'>
+            <Image
+              src='/digital-design/aurora-slide-2.webp'
+              height={756}
+              width={1344}
+              unoptimized={true}
+              priority
+              alt='aurora be-graphic'
+              className='object-left object-cover'
+            />
           </div>
         </motion.div>
       ) : (
         <PageContainer>
           <div className='h-full w-screen relative'>
             <Image
-              src='/digital-design/industrialbox-slide-1.webp'
+              src='/digital-design/aurora-slide-1.webp'
               fill
               unoptimized={true}
               priority
-              alt='industrialbox be-graphic'
-              className='object-left object-cover'
+              alt='aurora be-graphic'
+              className='object-right object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-end relative font-primary text-[#000000]'>
-              <div className='pl-[10vw] pb-[10vh]'>
+            <div className='h-full w-screen flex flex-col justify-end relative font-primary text-white'>
+              <div className='bottom-[30vh] absolute right-[calc(10%-20px)] flex flex-col gap-5 2xl:gap-8'>
                 <div className='overflow-hidden'>
-                  <motion.h1
+                  <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
-                    className='text-8xl font-bold'
                   >
-                    {t('title')}
-                  </motion.h1>
+                    <Image
+                      src={'/digital-design/aurora-logo.svg'}
+                      width={700}
+                      height={200}
+                      alt='aurora-logo be-graphic'
+                      className='h-28 2xl:h-32 w-auto'
+                    />
+                  </motion.div>
                 </div>
                 <ul className='text-4xl 2xl:text-5xl'>
                   <li className='overflow-hidden py-1'>
@@ -155,8 +202,17 @@ const page = () => {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
                     >
-                      {t('li-1-1')}
-                      <b>{t('li-1-2')}</b>
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-1-1')}
+                          <b className='italic text-[#7fd7c3]'>{t('li-1-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#7fd7c3]'>{t('li-1-1')}</b>
+                          {t('li-1-2')}
+                        </>
+                      )}
                     </motion.p>
                   </li>
                   <li className='overflow-hidden py-1'>
@@ -165,8 +221,36 @@ const page = () => {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.9 }}
                     >
-                      {t('li-2-1')}
-                      <b>{t('li-2-2')}</b>
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-2-1')}
+                          <b className='italic text-[#7fd7c3]'>{t('li-2-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#7fd7c3]'>{t('li-2-1')}</b>
+                          {t('li-2-2')}
+                        </>
+                      )}
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden py-1'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 1.2 }}
+                    >
+                      {locale === 'es' ? (
+                        <>
+                          {t('li-3-1')}
+                          <b className='italic text-[#7fd7c3]'>{t('li-3-2')}</b>
+                        </>
+                      ) : (
+                        <>
+                          <b className='italic text-[#7fd7c3]'>{t('li-3-1')}</b>
+                          {t('li-3-2')}
+                        </>
+                      )}
                     </motion.p>
                   </li>
                 </ul>
@@ -183,7 +267,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : ''}
                   transition={{ duration: 0.3, type: 'tween', delay: 0.8 }}
-                  className='font-secondary text-blue-400 text-7xl'
+                  className='font-secondary text-pink text-7xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -205,8 +289,15 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='bg-white h-auto w-screen relative flex justify-center items-center'>
-            <ImageSlider images={images} />
+          <div className='h-full w-screen relative'>
+            <Image
+              src='/digital-design/aurora-slide-2.webp'
+              fill
+              unoptimized={true}
+              priority
+              alt='aurora be-graphic'
+              className='object-left object-cover'
+            />
           </div>
         </PageContainer>
       )}
