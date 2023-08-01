@@ -34,7 +34,6 @@ export default async function LocaleLayout({ children, params: { locale } }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
-          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -21,29 +21,31 @@ const PageWrapper = ({ children }) => {
       }
     }
   }, [])
+  const animationVariants = {
+    mobile: {
+      initial: { opacity: 0, y: 20 },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: 20 },
+    },
+    desktop: {
+      initial: { opacity: 0 },
+      animate: { opacity: 1 },
+      exit: { opacity: 0 },
+    },
+  }
+
+  const animation = isMobile
+    ? animationVariants.mobile
+    : animationVariants.desktop
   return (
-    <>
-      {' '}
-      {isMobile ? (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          className='bg-white'
-        >
-          {children}
-        </motion.div>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, x: -600 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -600 }}
-          className='bg-white'
-        >
-          {children}
-        </motion.div>
-      )}
-    </>
+    <motion.div
+      initial={animation.initial}
+      animate={animation.animate}
+      exit={animation.exit}
+      className='bg-white'
+    >
+      {children}
+    </motion.div>
   )
 }
 

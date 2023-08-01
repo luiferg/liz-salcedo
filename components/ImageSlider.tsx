@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from 'popmotion'
 import { RxArrowLeft, RxArrowRight } from 'react-icons/rx'
+import Image from 'next/image'
 
 interface Image {
   src: string
@@ -51,10 +52,9 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   return (
     <>
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          className='absolute h-auto w-screen'
+        <motion.div
+          className='absolute h-full w-screen'
           key={page}
-          src={src}
           custom={direction}
           variants={variants}
           initial='enter'
@@ -76,7 +76,15 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
               paginate(-1)
             }
           }}
-        ></motion.img>
+        >
+          <Image
+            src={src}
+            alt='be-graphic'
+            fill
+            unoptimized={true}
+            className='object-left object-cover'
+          />
+        </motion.div>
       </AnimatePresence>
       <motion.div
         whileHover={{

@@ -1,9 +1,11 @@
-import { HomePage } from '@/components'
+import { HomePage, PageWrapper } from '@/components'
 
 export default function Home() {
   return (
     <main className=''>
-      <HomePage />
+      <PageWrapper>
+        <HomePage />
+      </PageWrapper>
     </main>
   )
 }
