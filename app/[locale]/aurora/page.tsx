@@ -1,5 +1,5 @@
 'use client'
-import { PageContainer } from '@/components'
+import { PageContainer, PageWrapper } from '@/components'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
@@ -30,7 +30,7 @@ const page = () => {
   }, [])
 
   return (
-    <div>
+    <PageWrapper>
       {isMobile ? (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -301,7 +301,7 @@ const page = () => {
           </div>
         </PageContainer>
       )}
-    </div>
+    </PageWrapper>
   )
 }
 
