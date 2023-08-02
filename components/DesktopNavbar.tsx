@@ -235,7 +235,7 @@ const DesktopNavbar = () => {
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
-                          href='/'
+                          href='/teaspoon'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/teaspoon-highlight.webp')
                             setIsVisible(true)
@@ -244,6 +244,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Teaspoon
@@ -252,7 +253,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/leaobranco'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/leaobranco-highlight.webp')
                             setIsVisible(true)
@@ -262,6 +263,7 @@ const DesktopNavbar = () => {
                             setIsVisible(false)
                           }}
                           className='group max-w-fit inline-block'
+                          onClick={closeMenu}
                         >
                           Leao Branco
                           <span className={`${menuSpan}`}></span>
@@ -269,7 +271,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/tonaypepo'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/tonaypepo-highlight.webp')
                             setIsVisible(true)
@@ -278,6 +280,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Toña y Pepo
@@ -293,7 +296,7 @@ const DesktopNavbar = () => {
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
-                          href='/'
+                          href='/agudanavaja'
                           onMouseEnter={() => {
                             setSrc(
                               '/menu-highlights/agudanavaja-highlight.webp'
@@ -304,6 +307,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           La Aguda Navaja de Algo que No Era Amor
@@ -312,7 +316,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/goyn'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/coronagoyn-highlight.webp')
                             setIsVisible(true)
@@ -321,6 +325,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Corona Goyn
@@ -329,7 +334,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/aptuno'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/aptuno-highlight.webp')
                             setIsVisible(true)
@@ -338,6 +343,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Aptuno
@@ -353,7 +359,7 @@ const DesktopNavbar = () => {
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
-                          href='/'
+                          href='/bumbox'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/Bumbox-highlight.webp')
                             setIsVisible(true)
@@ -362,6 +368,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           BumBox
@@ -370,7 +377,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/arbitramentos'
                           onMouseEnter={() => {
                             setSrc(
                               '/menu-highlights/arbitramentos-highlight.webp'
@@ -381,6 +388,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Arbitramentos
@@ -391,7 +399,11 @@ const DesktopNavbar = () => {
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-2xl font-bold'>
-                      <Link href='/' className='group max-w-fit inline-block'>
+                      <Link
+                        href='/about'
+                        onClick={closeMenu}
+                        className='group max-w-fit inline-block'
+                      >
                         {t('about-me')}
                         <span className={`${menuSpan}`}></span>
                       </Link>
@@ -400,7 +412,11 @@ const DesktopNavbar = () => {
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-2xl font-bold'>
-                      <Link href='/' className='group max-w-fit inline-block'>
+                      <Link
+                        href='/contact'
+                        onClick={closeMenu}
+                        className='group max-w-fit inline-block'
+                      >
                         {t('contact-me')}
                         <span className={`${menuSpan}`}></span>
                       </Link>

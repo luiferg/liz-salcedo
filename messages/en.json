@@ -5,7 +5,7 @@
   },
   "Navbar": {
     "digital-design": "Digital Design",
-    "graphic-design": "Graphic Design",
+    "graphic-design": "Web Design",
     "editorial-design": "Editorial Design",
     "brand-identity": "Brand Identity",
     "about-me": "About Me",
@@ -59,5 +59,13 @@
     "description-2": "Colombian company that administers social security benefits. ",
     "description-3": "It is a very familiar brand and with many years of experience.",
     "description-4": "The designs consisted of maintaining the basis of the graphic guidelines, but experimenting with other elements, typographies and colors that made social media look dynamic and striking."
+  },
+  "Teaspoon": {
+    "title": "Teaspoon",
+    "li-1": "Design and layout of e-commerce",
+    "description-1": "Teaspoon is a ",
+    "description-2": "jewelry company located in Miami, Florida. ",
+    "description-3": "Their products convey delicacy, femininity and romanticism.",
+    "description-4": "The design of the website was based on transmitting the delicacy of the products that the brand handles and achieving that the e-commerce maintained the same characteristics as the rest of the web, achieving unity and establishing a graphic line that could continue to be used in other types of communication."
   }
 }

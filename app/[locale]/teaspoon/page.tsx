@@ -1,5 +1,5 @@
 'use client'
-import { ImageSlider, PageContainer, PageWrapper } from '@/components'
+import { PageContainer, PageWrapper } from '@/components'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
@@ -7,20 +7,10 @@ import { useEffect, useRef, useState } from 'react'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
-  const t = useTranslations('Compensar')
+  const t = useTranslations('Teaspoon')
+  const locale = useLocale()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-
-  const locale = useLocale()
-
-  const images = [
-    {
-      src: '/digital-design/compensar-slide-2.webp',
-    },
-    {
-      src: '/digital-design/compensar-slide-3.webp',
-    },
-  ]
 
   useEffect(() => {
     const handleResize = () => {
@@ -43,7 +33,6 @@ const page = () => {
     <PageWrapper>
       {isMobile ? (
         <motion.div
-          key='compensarMobile'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: 'tween' }}
@@ -51,16 +40,16 @@ const page = () => {
         >
           <div className='h-full w-screen relative'>
             <Image
-              src='/digital-design/compensar-slide-1.webp'
+              src='/web-design/teaspoon-slide-1.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='compensar be-graphic'
-              className='object-left object-cover'
+              alt='teaspoon be-graphic'
+              className='object-center object-cover'
             />
-            <div className='absolute bottom-12 sm:bottom-20 flex flex-col justify-end font-primary text-[#222221]'>
-              <div className='pl-8 pb-4 sm:pb-8 flex flex-col gap-2'>
+            <div className='h-full w-screen flex flex-col justify-start items-center absolute font-primary'>
+              <div className='flex flex-col pt-2 justify-center items-center'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -68,32 +57,22 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/digital-design/compensar-logo.svg'}
+                      src={'/web-design/teaspoon-logo.svg'}
                       width={300}
                       height={100}
-                      alt='compensar-logo be-graphic'
-                      className='h-10 md:h-20 w-auto'
+                      alt='teaspoon-logo be-graphic'
+                      className='h-8 md:h-14 w-auto'
                     />
                   </motion.div>
                 </div>
-                <ul className='text-sm md:text-xl'>
+                <ul className='text-sm md:text-xl text-center -mt-2'>
                   <li className='overflow-hidden py-[2px]'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
                     >
-                      {locale === 'es' ? (
-                        <>
-                          {t('li-1-1')}
-                          <b className='text-[#ce5d1c]'>{t('li-1-2')}</b>
-                        </>
-                      ) : (
-                        <>
-                          <b className='text-[#ce5d1c]'>{t('li-1-1')}</b>
-                          {t('li-1-2')}
-                        </>
-                      )}
+                      {t('li-1')}
                     </motion.p>
                   </li>
                 </ul>
@@ -107,7 +86,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.3, type: 'tween', delay: 1.3 }}
-                  className='font-secondary text-orange text-3xl md:text-5xl'
+                  className='font-secondary text-blue-400 text-3xl md:text-5xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -128,23 +107,31 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='aspect-video w-screen relative flex'>
-            <ImageSlider images={images} />
+          <div className='h-full w-screen relative'>
+            <Image
+              src='/web-design/teaspoon-slide-2.webp'
+              height={756}
+              width={1344}
+              unoptimized={true}
+              priority
+              alt='teaspoon be-graphic'
+              className='object-left object-cover'
+            />
           </div>
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen relative' key='compensarDesktop'>
+          <div className='h-full w-screen relative'>
             <Image
-              src='/digital-design/compensar-slide-1.webp'
+              src='/web-design/teaspoon-slide-1.webp'
               fill
               unoptimized={true}
               priority
-              alt='compensar be-graphic'
-              className='object-left object-cover'
+              alt='teaspoon be-graphic'
+              className='object-center object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-end relative font-primary text-[#222221] font-medium'>
-              <div className='pl-[10vw] pb-[calc(18%-30px)] gap-4 flex flex-col'>
+            <div className='h-full w-screen flex flex-col justify-start items-center relative font-primary text-white'>
+              <div className='flex flex-col pt-[3vh] justify-center items-center'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -152,32 +139,23 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/digital-design/compensar-logo.svg'}
+                      src={'/web-design/teaspoon-logo.svg'}
                       width={700}
                       height={200}
-                      alt='compensar-logo be-graphic'
-                      className='h-32 w-auto'
+                      alt='teaspoon-logo be-graphic'
+                      className='h-28 2xl:h-32 w-auto'
                     />
                   </motion.div>
                 </div>
-                <ul className='text-4xl 2xl:text-5xl'>
-                  <li className='overflow-hidden py-1'>
+                <ul className='text-4xl 2xl:text-5xl text-center -mt-1'>
+                  <li className='overflow-hidden'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                      className='italic font-semibold text-white p-2'
                     >
-                      {locale === 'es' ? (
-                        <>
-                          {t('li-1-1')}
-                          <b className='text-[#ce5d1c]'>{t('li-1-2')}</b>
-                        </>
-                      ) : (
-                        <>
-                          <b className='text-[#ce5d1c]'>{t('li-1-1')}</b>
-                          {t('li-1-2')}
-                        </>
-                      )}
+                      {t('li-1')}
                     </motion.p>
                   </li>
                 </ul>
@@ -194,7 +172,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : ''}
                   transition={{ duration: 0.3, type: 'tween', delay: 0.8 }}
-                  className='font-secondary text-orange text-7xl'
+                  className='font-secondary text-blue-400 text-7xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -216,8 +194,15 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='bg-white h-auto lg:h-screen w-screen relative flex justify-center items-center'>
-            <ImageSlider images={images} />
+          <div className='h-full w-screen relative'>
+            <Image
+              src='/web-design/teaspoon-slide-2.webp'
+              fill
+              unoptimized={true}
+              priority
+              alt='teaspoon be-graphic'
+              className='object-left object-cover'
+            />
           </div>
         </PageContainer>
       )}

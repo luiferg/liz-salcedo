@@ -194,19 +194,31 @@ const MobileNavbar = () => {
                     </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/teaspoon'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           Teaspoon
                           <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/leaobranco'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           Leao Branco
                           <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/tonaypepo'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           Toña y Pepo
                           <span className={`${menuSpan}`}></span>
                         </Link>
@@ -219,19 +231,31 @@ const MobileNavbar = () => {
                     </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/agudanavaja'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           La Aguda Navaja de Algo que No Era Amor
                           <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/goyn'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           Corona Goyn
                           <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/aptuno'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           Aptuno
                           <span className={`${menuSpan}`}></span>
                         </Link>
@@ -244,13 +268,21 @@ const MobileNavbar = () => {
                     </h3>
                     <ul className={`${ulStyle}`}>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/bumbox'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           BumBox
                           <span className={`${menuSpan}`}></span>
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/arbitramentos'
+                          onClick={closeMenu}
+                          className='group max-w-fit inline-block'
+                        >
                           Arbitramentos
                           <span className={`${menuSpan}`}></span>
                         </Link>
@@ -259,7 +291,11 @@ const MobileNavbar = () => {
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-xl md:text-3xl font-bold'>
-                      <Link href='/' className='group max-w-fit inline-block'>
+                      <Link
+                        href='/about'
+                        onClick={closeMenu}
+                        className='group max-w-fit inline-block'
+                      >
                         {t('about-me')}
                         <span className={`${menuSpan}`}></span>
                       </Link>
@@ -268,7 +304,11 @@ const MobileNavbar = () => {
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-xl md:text-3xl font-bold'>
-                      <Link href='/' className='group max-w-fit inline-block'>
+                      <Link
+                        href='/contact'
+                        onClick={closeMenu}
+                        className='group max-w-fit inline-block'
+                      >
                         {t('contact-me')}
                         <span className={`${menuSpan}`}></span>
                       </Link>
