@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 const PageWrapper = ({ children }) => {
@@ -38,14 +38,17 @@ const PageWrapper = ({ children }) => {
     ? animationVariants.mobile
     : animationVariants.desktop
   return (
-    <motion.div
-      initial={animation.initial}
-      animate={animation.animate}
-      exit={animation.exit}
-      className='bg-white'
-    >
-      {children}
-    </motion.div>
+    <AnimatePresence mode='wait'>
+      <motion.div
+        key='wrapper'
+        initial={animation.initial}
+        animate={animation.animate}
+        exit={animation.exit}
+        className='bg-white'
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
   )
 }
 

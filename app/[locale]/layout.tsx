@@ -30,7 +30,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
         <title>{metadata.title}</title>
         <meta name='description' content={metadata.description} />
       </Head>
-      <body className='overflow-x-hidden'>
+      <body className='overflow-x-hidden bg-white'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}

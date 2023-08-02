@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
-  const t = useTranslations('Gopass')
+  const t = useTranslations('Compensar')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -15,10 +15,10 @@ const page = () => {
 
   const images = [
     {
-      src: '/digital-design/gopass-slide-2.webp',
+      src: '/digital-design/compensar-slide-2.webp',
     },
     {
-      src: '/digital-design/gopass-slide-3.webp',
+      src: '/digital-design/compensar-slide-3.webp',
     },
   ]
 
@@ -43,7 +43,7 @@ const page = () => {
     <PageWrapper>
       {isMobile ? (
         <motion.div
-          key='gopassMobile'
+          key='compensarMobile'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: 'tween' }}
@@ -51,16 +51,16 @@ const page = () => {
         >
           <div className='h-full w-screen relative'>
             <Image
-              src='/digital-design/gopass-slide-1.webp'
+              src='/digital-design/compensar-slide-1.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='gopass be-graphic'
+              alt='compensar be-graphic'
               className='object-left object-cover'
             />
-            <div className='absolute bottom-2 flex flex-col justify-end font-primary text-white'>
-              <div className='pl-8 pb-4 sm:pb-8'>
+            <div className='absolute bottom-12 sm:bottom-20 flex flex-col justify-end font-primary text-[#222221]'>
+              <div className='pl-8 pb-4 sm:pb-8 flex flex-col gap-2'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -68,10 +68,10 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/digital-design/gopass-logo.svg'}
+                      src={'/digital-design/compensar-logo.svg'}
                       width={300}
                       height={100}
-                      alt='gopass-logo be-graphic'
+                      alt='compensar-logo be-graphic'
                       className='h-10 md:h-20 w-auto'
                     />
                   </motion.div>
@@ -86,11 +86,11 @@ const page = () => {
                       {locale === 'es' ? (
                         <>
                           {t('li-1-1')}
-                          <b className='italic text-[#00e700]'>{t('li-1-2')}</b>
+                          <b className='italic text-[#ce5d1c]'>{t('li-1-2')}</b>
                         </>
                       ) : (
                         <>
-                          <b className='italic text-[#00e700]'>{t('li-1-1')}</b>
+                          <b className='italic text-[#ce5d1c]'>{t('li-1-1')}</b>
                           {t('li-1-2')}
                         </>
                       )}
@@ -107,7 +107,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.3, type: 'tween', delay: 1.3 }}
-                  className='font-secondary text-yellow text-3xl md:text-5xl'
+                  className='font-secondary text-orange text-3xl md:text-5xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -134,17 +134,17 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen relative' key='gopassDesktop'>
+          <div className='h-full w-screen relative' key='compensarDesktop'>
             <Image
-              src='/digital-design/gopass-slide-1.webp'
+              src='/digital-design/compensar-slide-1.webp'
               fill
               unoptimized={true}
               priority
-              alt='gopass be-graphic'
+              alt='compensar be-graphic'
               className='object-left object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-end relative font-primary text-white'>
-              <div className='pl-[10vw] pb-[10vh]'>
+            <div className='h-full w-screen flex flex-col justify-end relative font-primary text-[#222221] font-medium'>
+              <div className='pl-[10vw] pb-[calc(18%-30px)] gap-4 flex flex-col'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -152,11 +152,11 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/digital-design/gopass-logo.svg'}
+                      src={'/digital-design/compensar-logo.svg'}
                       width={700}
                       height={200}
-                      alt='gopass-logo be-graphic'
-                      className='h-40 w-auto'
+                      alt='compensar-logo be-graphic'
+                      className='h-32 w-auto'
                     />
                   </motion.div>
                 </div>
@@ -170,11 +170,11 @@ const page = () => {
                       {locale === 'es' ? (
                         <>
                           {t('li-1-1')}
-                          <b className='italic text-[#00e700]'>{t('li-1-2')}</b>
+                          <b className='italic text-[#ce5d1c]'>{t('li-1-2')}</b>
                         </>
                       ) : (
                         <>
-                          <b className='italic text-[#00e700]'>{t('li-1-1')}</b>
+                          <b className='italic text-[#ce5d1c]'>{t('li-1-1')}</b>
                           {t('li-1-2')}
                         </>
                       )}
@@ -194,7 +194,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : ''}
                   transition={{ duration: 0.3, type: 'tween', delay: 0.8 }}
-                  className='font-secondary text-yellow text-7xl'
+                  className='font-secondary text-orange text-7xl'
                 >
                   {t('title')}
                 </motion.h2>

@@ -132,7 +132,7 @@ const MobileNavbar = () => {
                 className='fixed h-[100svh] w-screen z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)] flex flex-col justify-center font-primary'
               >
                 <div className='flex flex-col max-h-[100svh] flex-wrap gap-1'>
-                  <Link href='/'>
+                  <Link href='/' onClick={closeMenu}>
                     <Image
                       src='/white-logo.svg'
                       height={100}
@@ -177,7 +177,11 @@ const MobileNavbar = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href='/' className='group max-w-fit inline-block'>
+                        <Link
+                          href='/compensar'
+                          className='group max-w-fit inline-block'
+                          onClick={closeMenu}
+                        >
                           Compensar
                           <span className={`${menuSpan}`}></span>
                         </Link>

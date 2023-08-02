@@ -210,7 +210,7 @@ const DesktopNavbar = () => {
                       </li>
                       <li>
                         <Link
-                          href='/'
+                          href='/compensar'
                           onMouseEnter={() => {
                             setSrc('/menu-highlights/compensar-highlight.webp')
                             setIsVisible(true)
@@ -219,6 +219,7 @@ const DesktopNavbar = () => {
                             setSrc('')
                             setIsVisible(false)
                           }}
+                          onClick={closeMenu}
                           className='group max-w-fit inline-block'
                         >
                           Compensar
