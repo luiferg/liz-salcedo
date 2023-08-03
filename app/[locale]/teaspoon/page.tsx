@@ -146,7 +146,7 @@ const page = () => {
                     />
                   </motion.div>
                 </div>
-                <ul className='text-4xl 2xl:text-5xl text-center -mt-1'>
+                <ul className='text-3xl 2xl:text-4xl text-center -mt-1'>
                   <li className='overflow-hidden'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}

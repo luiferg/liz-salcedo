@@ -47,7 +47,7 @@ const page = () => {
               alt='agudanavaja be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen absolute top-0 flex flex-col font-primary text-white'>
+            <div className='h-full w-screen absolute top-0 flex flex-col font-primary'>
               <div className='flex flex-col pt-2 sm:pt-4 pl-6 sm:pl-10'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -64,16 +64,36 @@ const page = () => {
                     />
                   </motion.div>
                 </div>
-                <ul className='text-sm md:text-xl'>
-                  <li className='overflow-hidden py-[2px]'>
+                <ul className='text-sm md:text-xl flex flex-row gap-2 flex-wrap text-[#000000]'>
+                  <li className='overflow-hidden'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
-                      className='text-white font-light'
+                      className='font-light'
                     >
-                      {t('li-1-1')}
+                      •{t('li-1-1')}
                       <b className='font-medium'>{t('li-1-2')}</b>
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                      className='font-light'
+                    >
+                      •{t('li-2')}
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                      className='font-light'
+                    >
+                      •<b className='font-medium'>{t('li-3')}</b>
                     </motion.p>
                   </li>
                 </ul>
@@ -130,7 +150,7 @@ const page = () => {
               alt='agudanavaja be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-start items-start relative font-primary text-white'>
+            <div className='h-full w-screen flex flex-col justify-start items-start relative font-primary text-[#000000]'>
               <div className='flex flex-col ml-[10vw] pt-[4vh] 2xl:pt-[6vh]'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -147,16 +167,36 @@ const page = () => {
                     />
                   </motion.div>
                 </div>
-                <ul className='text-4xl 2xl:text-5xl'>
+                <ul className='text-3xl 2xl:text-4xl flex flex-row gap-10 '>
                   <li className='overflow-hidden'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
-                      className='text-white py-4 font-light'
+                      className='py-4 font-light'
                     >
-                      {t('li-1-1')}
+                      •{t('li-1-1')}
                       <b className='font-medium'>{t('li-1-2')}</b>
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                      className='py-4 font-light'
+                    >
+                      •{t('li-2')}
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                      className='py-4 font-light'
+                    >
+                      •<b className='font-medium'>{t('li-3')}</b>
                     </motion.p>
                   </li>
                 </ul>

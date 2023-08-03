@@ -1,13 +1,14 @@
 'use client'
 import { PageContainer, PageWrapper } from '@/components'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
-  const t = useTranslations('Tonaypepo')
+  const t = useTranslations('Aptuno')
+  const locale = useLocale()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -39,15 +40,15 @@ const page = () => {
         >
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/tonaypepo-slide-1.webp'
+              src='/editorial-design/aptuno-slide-1.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='tonaypepo be-graphic'
+              alt='aptuno be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen absolute top-0 flex flex-col font-primary text-white'>
+            <div className='absolute bottom-3 sm:bottom-5 flex flex-col justify-end font-primary text-[#000000]'>
               <div className='flex flex-col pt-2 sm:pt-4 pl-6 sm:pl-10'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -56,24 +57,39 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/web-design/tonaypepo-logo.svg'}
+                      src={'/editorial-design/aptuno-logo.svg'}
                       width={300}
                       height={100}
-                      alt='tonaypepo-logo be-graphic'
-                      className='h-8 md:h-14 w-auto'
+                      alt='aptuno-logo be-graphic'
+                      className='h-6 md:h-10 w-auto'
                     />
                   </motion.div>
                 </div>
-                <ul className='text-sm md:text-xl'>
+                <ul className='text-xs md:text-lg w-[50%]'>
                   <li className='overflow-hidden py-[2px]'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
-                      className='text-white font-light'
+                      className='py-[2px]'
                     >
-                      {t('li-1-1')}
-                      <b className='font-medium'>{t('li-1-2')}</b>
+                      <b className='font-semibold text-[#2670ca]'>
+                        {t('li-1-1')}
+                      </b>
+                      {t('li-1-2')}
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden py-[2px]'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.9 }}
+                      className='py-[2px]'
+                    >
+                      <b className='font-semibold text-[#2670ca]'>
+                        {t('li-2-1')}
+                      </b>
+                      {t('li-2-2')}
                     </motion.p>
                   </li>
                 </ul>
@@ -87,7 +103,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.3, type: 'tween', delay: 1.3 }}
-                  className='font-secondary text-yellow text-3xl md:text-5xl'
+                  className='font-secondary text-orange text-3xl md:text-5xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -110,12 +126,12 @@ const page = () => {
           </div>
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/tonaypepo-slide-2.webp'
+              src='/editorial-design/aptuno-slide-2.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='tonaypepo be-graphic'
+              alt='aptuno be-graphic'
               className='object-left object-cover'
             />
           </div>
@@ -124,15 +140,15 @@ const page = () => {
         <PageContainer>
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/tonaypepo-slide-1.webp'
+              src='/editorial-design/aptuno-slide-1.webp'
               fill
               unoptimized={true}
               priority
-              alt='tonaypepo be-graphic'
-              className='object-center object-cover'
+              alt='aptuno be-graphic'
+              className='object-left object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-start items-start relative font-primary text-white'>
-              <div className='flex flex-col ml-[10vw] pt-[4vh]'>
+            <div className='h-full w-screen flex flex-col justify-end items-start relative font-primary text-[#000000]'>
+              <div className='flex flex-col ml-[9vw] pb-[4vh] 2xl:pb-[8vh]'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -140,24 +156,39 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/web-design/tonaypepo-logo.svg'}
+                      src={'/editorial-design/aptuno-logo.svg'}
                       width={700}
                       height={200}
-                      alt='tonaypepo-logo be-graphic'
-                      className='h-24 2xl:h-28 w-auto'
+                      alt='aptuno-logo be-graphic'
+                      className='h-20 2xl:h-24 w-auto'
                     />
                   </motion.div>
                 </div>
-                <ul className='text-3xl 2xl:text-4xl'>
+                <ul className='text-3xl 2xl:text-4xl -mt-1 w-[65%] flex flex-col flex-wrap'>
                   <li className='overflow-hidden'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
-                      className='text-white py-4 font-light'
+                      className='py-4'
                     >
-                      {t('li-1-1')}
-                      <b className='font-medium'>{t('li-1-2')}</b>
+                      <b className='font-semibold text-[#2670ca]'>
+                        {t('li-1-1')}
+                      </b>
+                      {t('li-1-2')}
+                    </motion.p>
+                  </li>
+                  <li className='overflow-hidden'>
+                    <motion.p
+                      initial={{ y: 100, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, type: 'tween', delay: 0.9 }}
+                      className='py-4'
+                    >
+                      <b className='font-semibold text-[#2670ca]'>
+                        {t('li-2-1')}
+                      </b>
+                      {t('li-2-2')}
                     </motion.p>
                   </li>
                 </ul>
@@ -174,7 +205,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : ''}
                   transition={{ duration: 0.3, type: 'tween', delay: 0.8 }}
-                  className='font-secondary text-yellow text-7xl'
+                  className='font-secondary text-orange text-7xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -188,21 +219,20 @@ const page = () => {
                 <p className='font-primary text-black text-2xl'>
                   {t('description-1')}
                   <b>{t('description-2')}</b>
-                  {t('description-3')}
                 </p>
                 <p className='font-primary text-black text-2xl'>
-                  {t('description-4')}
+                  {t('description-3')}
                 </p>
               </motion.div>
             </div>
           </div>
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/tonaypepo-slide-2.webp'
+              src='/editorial-design/aptuno-slide-2.webp'
               fill
               unoptimized={true}
               priority
-              alt='tonaypepo be-graphic'
+              alt='aptuno be-graphic'
               className='object-left object-cover'
             />
           </div>
