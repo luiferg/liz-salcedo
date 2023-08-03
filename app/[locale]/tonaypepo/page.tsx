@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const page = () => {
   const [isMobile, setIsMobile] = useState(false)
-  const t = useTranslations('Teaspoon')
+  const t = useTranslations('Tonaypepo')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -39,16 +39,16 @@ const page = () => {
         >
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/teaspoon-slide-1.webp'
+              src='/web-design/tonaypepo-slide-1.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='teaspoon be-graphic'
+              alt='tonaypepo be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen absolute top-0 flex flex-col justify-start items-center font-primary text-white'>
-              <div className='flex flex-col pt-2 justify-center items-center'>
+            <div className='h-full w-screen absolute top-0 flex flex-col font-primary text-white'>
+              <div className='flex flex-col pt-2 sm:pt-4 pl-6 sm:pl-10'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -56,22 +56,24 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/web-design/teaspoon-logo.svg'}
+                      src={'/web-design/tonaypepo-logo.svg'}
                       width={300}
                       height={100}
-                      alt='teaspoon-logo be-graphic'
+                      alt='tonaypepo-logo be-graphic'
                       className='h-8 md:h-14 w-auto'
                     />
                   </motion.div>
                 </div>
-                <ul className='text-sm md:text-xl text-center -mt-2'>
-                  <li className='overflow-hidden py-[2px] italic font-medium'>
+                <ul className='text-sm md:text-xl'>
+                  <li className='overflow-hidden py-[2px]'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
+                      className='text-white font-light'
                     >
-                      {t('li-1')}
+                      {t('li-1-1')}
+                      <b className='font-medium'>{t('li-1-2')}</b>
                     </motion.p>
                   </li>
                 </ul>
@@ -85,7 +87,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.3, type: 'tween', delay: 1.3 }}
-                  className='font-secondary text-blue-400 text-3xl md:text-5xl'
+                  className='font-secondary text-yellow text-3xl md:text-5xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -108,12 +110,12 @@ const page = () => {
           </div>
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/teaspoon-slide-2.webp'
+              src='/web-design/tonaypepo-slide-2.webp'
               height={756}
               width={1344}
               unoptimized={true}
               priority
-              alt='teaspoon be-graphic'
+              alt='tonaypepo be-graphic'
               className='object-left object-cover'
             />
           </div>
@@ -122,15 +124,15 @@ const page = () => {
         <PageContainer>
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/teaspoon-slide-1.webp'
+              src='/web-design/tonaypepo-slide-1.webp'
               fill
               unoptimized={true}
               priority
-              alt='teaspoon be-graphic'
+              alt='tonaypepo be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-start items-center relative font-primary text-white'>
-              <div className='flex flex-col pt-[3vh] justify-center items-center'>
+            <div className='h-full w-screen flex flex-col justify-start items-start relative font-primary text-white'>
+              <div className='flex flex-col ml-[10vw] pt-[4vh] 2xl:pt-[6vh]'>
                 <div className='overflow-hidden'>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -138,23 +140,24 @@ const page = () => {
                     transition={{ duration: 0.3, type: 'tween', delay: 0.4 }}
                   >
                     <Image
-                      src={'/web-design/teaspoon-logo.svg'}
+                      src={'/web-design/tonaypepo-logo.svg'}
                       width={700}
                       height={200}
-                      alt='teaspoon-logo be-graphic'
+                      alt='tonaypepo-logo be-graphic'
                       className='h-28 2xl:h-32 w-auto'
                     />
                   </motion.div>
                 </div>
-                <ul className='text-4xl 2xl:text-5xl text-center -mt-1'>
+                <ul className='text-4xl 2xl:text-5xl'>
                   <li className='overflow-hidden'>
                     <motion.p
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
-                      className='italic font-semibold text-white p-2'
+                      className='text-white py-4 font-light'
                     >
-                      {t('li-1')}
+                      {t('li-1-1')}
+                      <b className='font-medium'>{t('li-1-2')}</b>
                     </motion.p>
                   </li>
                 </ul>
@@ -171,7 +174,7 @@ const page = () => {
                   initial={{ y: 100, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : ''}
                   transition={{ duration: 0.3, type: 'tween', delay: 0.8 }}
-                  className='font-secondary text-blue-400 text-7xl'
+                  className='font-secondary text-yellow text-7xl'
                 >
                   {t('title')}
                 </motion.h2>
@@ -195,11 +198,11 @@ const page = () => {
           </div>
           <div className='h-full w-screen relative'>
             <Image
-              src='/web-design/teaspoon-slide-2.webp'
+              src='/web-design/tonaypepo-slide-2.webp'
               fill
               unoptimized={true}
               priority
-              alt='teaspoon be-graphic'
+              alt='tonaypepo be-graphic'
               className='object-left object-cover'
             />
           </div>

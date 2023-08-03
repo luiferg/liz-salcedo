@@ -80,6 +80,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
           <Image
             src={src}
             alt='be-graphic'
+            priority
             fill
             unoptimized={true}
             className='object-left object-cover'

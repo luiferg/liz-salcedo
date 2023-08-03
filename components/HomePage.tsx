@@ -68,7 +68,7 @@ const HomePage = () => {
       ) : (
         <PageContainer>
           <div className='h-full w-screen relative'>
-            <div className='h-full w-screen'>
+            <div className='h-full w-screen relative'>
               <Image
                 src='/aguda-navaja.webp'
                 fill
@@ -96,7 +96,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className='h-full w-screen relative'>
-            <div className='h-full w-screen'>
+            <div className='h-full w-screen relative'>
               <Image
                 src='/gopass.webp'
                 fill
