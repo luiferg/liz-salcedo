@@ -94,7 +94,7 @@ const page = () => {
             </div>
           </div>
           <div className='bg-white flex p-8 justify-center items-center'>
-            <div className='flex flex-col gap-2 w-90% md:w-[80%] text-center'>
+            <div className='flex flex-col gap-3 w-90% md:w-[80%] text-center'>
               <div className='overflow-hidden'>
                 <motion.h2
                   initial={{ y: 100, opacity: 0 }}
@@ -109,6 +109,7 @@ const page = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1.6 }}
+                className='flex flex-col gap-3'
               >
                 <p className='font-primary text-black text-sm md:text-xl'>
                   {t('description-1')}

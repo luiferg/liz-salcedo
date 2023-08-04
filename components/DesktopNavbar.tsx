@@ -138,7 +138,7 @@ const DesktopNavbar = () => {
                 className='fixed h-screen w-[50vw] z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)] font-primary'
               >
                 <div className='flex flex-col h-full justify-center gap-2 2xl:gap-4'>
-                  <Link href='/'>
+                  <Link href='/' onClick={closeMenu}>
                     <Image
                       src='/white-logo.svg'
                       height={100}
@@ -361,7 +361,7 @@ const DesktopNavbar = () => {
                         <Link
                           href='/bumbox'
                           onMouseEnter={() => {
-                            setSrc('/menu-highlights/Bumbox-highlight.webp')
+                            setSrc('/menu-highlights/bumbox-highlight.webp')
                             setIsVisible(true)
                           }}
                           onMouseLeave={() => {
