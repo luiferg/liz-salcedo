@@ -80,17 +80,17 @@ const HomePage = () => {
             </div>
           </div>
           <div className='h-full w-screen bg-white flex p-28 justify-center items-center'>
-            <div className='flex flex-col gap-6 text-center w-[60%] flex-wrap'>
+            <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <p className='font-secondary text-blue-400 text-7xl'>
                 {t('greetings')}
                 <br />
                 {t('name')}
               </p>
-              <p className='font-primary text-black text-2xl'>
+              <p className='font-primary text-black text-xl'>
                 <b>{t('introduction-1')}</b>
                 {t('introduction-2')}
               </p>
-              <p className='font-primary text-black text-2xl'>
+              <p className='font-primary text-black text-xl'>
                 <strong>{t('welcome')} </strong>
               </p>
             </div>

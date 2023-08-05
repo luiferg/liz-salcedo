@@ -169,7 +169,7 @@ const page = () => {
             ref={ref}
             className='h-full w-screen bg-white flex p-28 justify-center items-center'
           >
-            <div className='flex flex-col gap-6 text-center w-[60%] flex-wrap'>
+            <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>
                 <motion.h2
                   initial={{ y: 100, opacity: 0 }}
@@ -186,12 +186,12 @@ const page = () => {
                 transition={{ durantion: 0.5, delay: 1.2 }}
                 className='flex flex-col gap-6'
               >
-                <p className='font-primary text-black text-2xl'>
+                <p className='font-primary text-black text-xl'>
                   {t('description-1')}
                   <b>{t('description-2')}</b>
                   {t('description-3')}
                 </p>
-                <p className='font-primary text-black text-2xl'>
+                <p className='font-primary text-black text-xl'>
                   {t('description-4')}
                 </p>
               </motion.div>

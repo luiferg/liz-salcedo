@@ -148,9 +148,7 @@ const DesktopNavbar = () => {
                     />
                   </Link>
                   <div className='text-white'>
-                    <h3 className='text-2xl font-bold'>
-                      {t('digital-design')}
-                    </h3>
+                    <h3 className='text-xl font-bold'>{t('digital-design')}</h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
@@ -229,9 +227,7 @@ const DesktopNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-2xl font-bold'>
-                      {t('graphic-design')}
-                    </h3>
+                    <h3 className='text-xl font-bold'>{t('graphic-design')}</h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
@@ -290,7 +286,7 @@ const DesktopNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-2xl font-bold'>
+                    <h3 className='text-xl font-bold'>
                       {t('editorial-design')}
                     </h3>
                     <ul className={`${ulStyle}`}>
@@ -353,9 +349,7 @@ const DesktopNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white'>
-                    <h3 className='text-2xl font-bold'>
-                      {t('brand-identity')}
-                    </h3>
+                    <h3 className='text-xl font-bold'>{t('brand-identity')}</h3>
                     <ul className={`${ulStyle}`}>
                       <li>
                         <Link
@@ -398,7 +392,7 @@ const DesktopNavbar = () => {
                     </ul>
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
-                    <h3 className='text-2xl font-bold'>
+                    <h3 className='text-xl font-bold'>
                       <Link
                         href='/about'
                         onClick={closeMenu}
@@ -411,7 +405,7 @@ const DesktopNavbar = () => {
                     <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
-                    <h3 className='text-2xl font-bold'>
+                    <h3 className='text-xl font-bold'>
                       <Link
                         href='/contact'
                         onClick={closeMenu}
