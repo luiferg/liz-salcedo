@@ -7,6 +7,7 @@ import LanguageSwitcher from './LanguageSwitcher'
 import ImageSlider from './ImageSlider'
 import Footer from './Footer'
 import PageWrapper from './PageWrapper'
+import StarIcon from './StarIcon'
 
 export {
   DesktopNavbar,
@@ -17,5 +18,6 @@ export {
   LanguageSwitcher,
   ImageSlider,
   Footer,
+  StarIcon,
   PageWrapper,
 }

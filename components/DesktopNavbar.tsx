@@ -32,7 +32,10 @@ const DesktopNavbar = () => {
         <nav className='invisible lg:visible fixed z-10 min-lg'>
           <div className='bg-white lg:w-[6vw] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'>
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
-              <Link href='/'>
+              <Link
+                href='/'
+                className='hover:scale-110 transition-all active:scale-100 duration-300'
+              >
                 <Image
                   src='/logo.svg'
                   priority
@@ -44,21 +47,13 @@ const DesktopNavbar = () => {
               </Link>
               <div className='flex flex-col justify-center items-center gap-4'>
                 <LanguageSwitcher />
-                <motion.button
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { duration: 0.2, type: 'spring' },
-                  }}
-                  whileTap={{
-                    scale: 1,
-                    transition: { duration: 0.2, type: 'spring' },
-                  }}
-                  className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center'
+                <button
+                  className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center hover:scale-110 transition-all active:scale-100 duration-300'
                   onClick={openMenu}
                   type='button'
                 >
                   <RxHamburgerMenu className='text-white text-3xl' />
-                </motion.button>
+                </button>
               </div>
             </div>
           </div>
