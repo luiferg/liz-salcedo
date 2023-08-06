@@ -143,5 +143,8 @@
     "li-3-1": "Design and layout of digital and editorial pieces.",
     "li-3-2": "Copywriting",
     "li-3-3": "Leadership of design projects."
+  },
+  "Button": {
+    "view": "Check the project"
   }
 }

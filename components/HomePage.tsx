@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { PageContainer } from '.'
+import { PageContainer, ProjectButton } from '.'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
@@ -77,6 +77,9 @@ const HomePage = () => {
                 alt='aguda navaja be-graphic'
                 className='object-left object-cover'
               />
+              <div className='absolute bottom-12 right-12'>
+                <ProjectButton link='/agudanavaja' />
+              </div>
             </div>
           </div>
           <div className='h-full w-screen bg-white flex p-28 justify-center items-center'>
@@ -104,6 +107,9 @@ const HomePage = () => {
                 alt='gopass be-graphic'
                 className='object-left object-cover'
               />
+              <div className='absolute bottom-12 right-12'>
+                <ProjectButton link='/gopass' />
+              </div>
             </div>
           </div>
         </PageContainer>

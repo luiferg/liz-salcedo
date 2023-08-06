@@ -143,5 +143,8 @@
     "li-3-1": "Diseño y maquetación de piezas digitales y editoriales.",
     "li-3-2": "Creación de copys y redacción de textos.",
     "li-3-3": "Liderazgo de proyectos de diseño."
+  },
+  "Button": {
+    "view": "Ver proyecto"
   }
 }

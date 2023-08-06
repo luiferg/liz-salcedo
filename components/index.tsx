@@ -8,6 +8,7 @@ import ImageSlider from './ImageSlider'
 import Footer from './Footer'
 import PageWrapper from './PageWrapper'
 import StarIcon from './StarIcon'
+import ProjectButton from './ProjectButton'
 
 export {
   DesktopNavbar,
@@ -19,5 +20,6 @@ export {
   ImageSlider,
   Footer,
   StarIcon,
+  ProjectButton,
   PageWrapper,
 }
