@@ -39,16 +39,12 @@ const ContactForm = () => {
       onSubmit={sendEmail}
       className='flex flex-col gap-4 font-primary text-sm md:text-lg'
     >
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0, transition: { delay: 0.7 } }}
-        className='text-lg lg:text-xl 2xl:text-2xl font-semibold text-white'
-      >
+      <h1 className='text-lg lg:text-xl 2xl:text-2xl font-semibold text-white'>
         {t('say-hi')}
-      </motion.h1>
+      </h1>
       <div className='flex flex-col gap-4'>
         <div className='flex gap-4'>
-          <motion.input
+          <input
             type='text'
             minLength={3}
             maxLength={100}
@@ -56,11 +52,9 @@ const ContactForm = () => {
             id='name'
             name='name'
             required
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 1 } }}
-            className='p-2 lg:p-3 rounded-xl bg-white focus:bg-opacity-10 focus:outline-[0.5px] focus:placeholder:invisible focus:outline-white transition-all duration-300 focus:text-white text-black'
+            className='p-2 lg:p-3 rounded-xl bg-white focus:bg-opacity-10 focus:outline-[0.5px] focus:placeholder:invisible focus:outline-white transition-all duration-300 focus:text-white text-black w-[50%]'
           />
-          <motion.input
+          <input
             minLength={5}
             maxLength={150}
             type='email'
@@ -68,43 +62,30 @@ const ContactForm = () => {
             id='email'
             name='email'
             required
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 1.3 } }}
-            className='p-2 lg:p-3 rounded-xl bg-white focus:bg-opacity-10 focus:outline-[0.5px] focus:placeholder:invisible focus:outline-white transition-all duration-300 focus:text-white text-black'
+            className='p-2 lg:p-3 rounded-xl bg-white focus:bg-opacity-10 focus:outline-[0.5px] focus:placeholder:invisible focus:outline-white transition-all duration-300 focus:text-white text-black w-[50%]'
           />
         </div>
-        <motion.input
+        <input
           type='text'
           placeholder={t('subject')}
           id='subject'
           name='subject'
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 1.6 } }}
           className='w-full p-2 lg:p-3 rounded-xl bg-white focus:bg-opacity-10 focus:outline-[0.5px] focus:placeholder:invisible focus:outline-white transition-all duration-300 focus:text-white text-black'
         />
-        <motion.textarea
+        <textarea
           rows={5}
           minLength={10}
           maxLength={500}
           placeholder={t('message')}
           id='message'
           name='message'
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 1.9 } }}
           className='resize-none w-full p-2 lg:p-3 rounded-xl bg-white focus:bg-opacity-10 focus:outline-[0.5px] focus:placeholder:invisible focus:outline-white transition-all duration-300 focus:text-white text-black'
         />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 2.2 } }}
-          className='flex flex-row gap-1 lg:gap-2 justify-start items-center'
-        >
+        <div className='flex flex-row gap-1 lg:gap-2 justify-start items-center'>
           <input type='checkbox' required className='w-4 h-4' />
           <label className='text-white'>{t('agreetment')}</label>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0, transition: { delay: 2.5 } }}
-        >
+        </div>
+        <div>
           <button
             type='submit'
             className='bg-pink p-2 lg:p-3 w-fit rounded-xl font-semibold text-white flex items-center gap-1 hover:scale-110 active:scale-100 transition-all duration-300'
@@ -112,7 +93,7 @@ const ContactForm = () => {
             {t('submit')}
             <BsSend />
           </button>
-        </motion.div>
+        </div>
       </div>
       <SuccessModal showModal={showModal} setShowModal={setShowModal} />
     </form>

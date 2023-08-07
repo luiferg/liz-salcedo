@@ -11,6 +11,7 @@ import StarIcon from './StarIcon'
 import ProjectButton from './ProjectButton'
 import ContactForm from './ContactForm'
 import SuccessModal from './SuccessModal'
+import InteractiveLogo from './InteractiveLogo'
 
 export {
   DesktopNavbar,
@@ -26,4 +27,5 @@ export {
   ContactForm,
   PageWrapper,
   SuccessModal,
+  InteractiveLogo,
 }
