@@ -146,5 +146,19 @@
   },
   "Button": {
     "view": "Check the project"
+  },
+  "ContactForm": {
+    "say-hi": "Let's get in touch!",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "subject": "Subject",
+    "message": "Message",
+    "agreetment": "I accept to be contacted by Be-Graphic",
+    "submit": "Send"
+  },
+  "ContactModal": {
+    "success": "Great!",
+    "message": "Message has been sent successfully!"
   }
 }

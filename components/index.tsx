@@ -9,6 +9,8 @@ import Footer from './Footer'
 import PageWrapper from './PageWrapper'
 import StarIcon from './StarIcon'
 import ProjectButton from './ProjectButton'
+import ContactForm from './ContactForm'
+import SuccessModal from './SuccessModal'
 
 export {
   DesktopNavbar,
@@ -21,5 +23,7 @@ export {
   Footer,
   StarIcon,
   ProjectButton,
+  ContactForm,
   PageWrapper,
+  SuccessModal,
 }
