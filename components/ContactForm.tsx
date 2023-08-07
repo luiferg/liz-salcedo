@@ -101,15 +101,18 @@ const ContactForm = () => {
           <input type='checkbox' required className='w-4 h-4' />
           <label className='text-white'>{t('agreetment')}</label>
         </motion.div>
-        <motion.button
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 2.5 } }}
-          type='submit'
-          className='bg-pink p-2 lg:p-3 w-fit rounded-xl font-semibold text-white flex items-center gap-1 hover:scale-110 active:scale-100 transition-all duration-300'
         >
-          {t('submit')}
-          <BsSend />
-        </motion.button>
+          <button
+            type='submit'
+            className='bg-pink p-2 lg:p-3 w-fit rounded-xl font-semibold text-white flex items-center gap-1 hover:scale-110 active:scale-100 transition-all duration-300'
+          >
+            {t('submit')}
+            <BsSend />
+          </button>
+        </motion.div>
       </div>
       <SuccessModal showModal={showModal} setShowModal={setShowModal} />
     </form>
