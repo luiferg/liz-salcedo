@@ -8,6 +8,7 @@ const PageContainer = ({ children }) => {
   const ghostRef = useRef(null)
   const [scrollRange, setScrollRange] = useState(0)
   const [viewportW, setViewportW] = useState(0)
+
   useLayoutEffect(() => {
     scrollRef && setScrollRange(scrollRef.current.scrollWidth)
   }, [scrollRef])

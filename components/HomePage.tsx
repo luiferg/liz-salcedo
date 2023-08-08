@@ -27,7 +27,7 @@ const HomePage = () => {
     <div>
       {isMobile ? (
         <div className='visible lg:invisible'>
-          <div>
+          <div className='relative'>
             <Image
               src='/aguda-navaja.webp'
               height={1344}
@@ -37,6 +37,9 @@ const HomePage = () => {
               alt='aguda navaja be-graphic'
               className='h-auto w-screen'
             />
+            <div className='absolute bottom-4 right-4 z-10'>
+              <ProjectButton link='/agudanavaja' />
+            </div>
           </div>
           <div className='bg-white flex p-8 justify-center items-center'>
             <div className='flex flex-col gap-3 w-90% md:w-[80%] text-center'>
@@ -54,7 +57,7 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className='relative'>
             <Image
               src='/gopass.webp'
               height={1344}
@@ -63,6 +66,9 @@ const HomePage = () => {
               alt='gopass be-graphic'
               className='h-auto w-screen'
             />
+            <div className='absolute bottom-4 right-4 z-10'>
+              <ProjectButton link='/gopass' />
+            </div>
           </div>
         </div>
       ) : (

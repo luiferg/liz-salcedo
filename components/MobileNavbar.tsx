@@ -81,7 +81,7 @@ const MobileNavbar = () => {
                     mass: 2,
                   },
                 }}
-                className='fixed h-[100svh] w-screen z-20 bg-blue-600'
+                className='fixed h-[100dvh] w-screen z-20 bg-blue-600'
               />
               <motion.div
                 initial={{ x: -2000 }}
@@ -105,7 +105,7 @@ const MobileNavbar = () => {
                     mass: 2,
                   },
                 }}
-                className='fixed h-[100svh] w-screen z-20 bg-blue-500'
+                className='fixed h-[100dvh] w-screen z-20 bg-blue-500'
               />
               <motion.div
                 initial={{ x: -2000 }}
@@ -129,7 +129,7 @@ const MobileNavbar = () => {
                     delay: 0.2,
                   },
                 }}
-                className='fixed h-[100svh] w-screen z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)] flex flex-col justify-center font-primary'
+                className='fixed h-[100dvh] w-screen z-20 bg-blue-400 p-10 shadow-[2px_0_5px_0_rgba(0,0,0,0.3)] flex flex-col justify-center font-primary'
               >
                 <div className='flex flex-col max-h-[100svh] flex-wrap gap-1'>
                   <Link href='/' onClick={closeMenu}>

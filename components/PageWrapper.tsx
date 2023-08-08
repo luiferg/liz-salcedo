@@ -40,7 +40,6 @@ const PageWrapper = ({ children }) => {
     : animationVariants.desktop
   return (
     <AnimatePresence mode='wait'>
-      <Navbar />
       <motion.div
         key='wrapper'
         initial={animation.initial}
@@ -49,7 +48,6 @@ const PageWrapper = ({ children }) => {
         className='bg-white'
       >
         {children}
-        <Footer />
       </motion.div>
     </AnimatePresence>
   )
