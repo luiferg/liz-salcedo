@@ -142,7 +142,8 @@
     "li-2-1": "Design and layout of digital media.",
     "li-3-1": "Design and layout of digital and editorial pieces.",
     "li-3-2": "Copywriting",
-    "li-3-3": "Leadership of design projects."
+    "li-3-3": "Leadership of design projects.",
+    "cv-link": "/docs/CV-2023-Lizeth-Salcedo-EN.pdf"
   },
   "Button": {
     "view": "Check the project"
@@ -167,6 +168,7 @@
     "about": "About me",
     "web-design": "Web design",
     "developer": "Developed by ",
-    "rights": " All rights reserved "
+    "rights": " All rights reserved ",
+    "cv-link": "/docs/CV-2023-Lizeth-Salcedo-EN.pdf"
   }
 }

@@ -82,17 +82,17 @@ const Footer = () => {
           >
             <FaLinkedinIn />
           </a>
-          <a
-            href='https://be-graphic.net/docs/CV-2023-Liz-Salcedo.pdf'
+          <Link
+            href={t('cv-link')}
             className='p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
             rel='nofollow'
             target='_blank'
           >
             <BsFileEarmarkPerson />
-          </a>
+          </Link>
         </div>
       </div>
-      <div className='flex flex-row w-full justify-center text-center'>
+      <div className='flex flex-row w-full justify-center text-center pt-4'>
         Copyright &copy; 2023 Be-Graphic.{t('rights')}
       </div>
     </footer>

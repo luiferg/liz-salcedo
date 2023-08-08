@@ -142,7 +142,8 @@
     "li-2-1": "Diseño y maquetación de piezas digitales.",
     "li-3-1": "Diseño y maquetación de piezas digitales y editoriales.",
     "li-3-2": "Creación de copys y redacción de textos.",
-    "li-3-3": "Liderazgo de proyectos de diseño."
+    "li-3-3": "Liderazgo de proyectos de diseño.",
+    "cv-link": "/docs/CV-2023-Lizeth-Salcedo.pdf"
   },
   "Button": {
     "view": "Ver proyecto"
@@ -167,6 +168,7 @@
     "about": "Sobre mí",
     "web-design": "Diseño web",
     "developer": "Desarrollado por ",
-    "rights": " Todos los derechos reservados "
+    "rights": " Todos los derechos reservados ",
+    "cv-link": "/docs/CV-2023-Lizeth-Salcedo.pdf"
   }
 }

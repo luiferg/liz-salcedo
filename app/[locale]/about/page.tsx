@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { PageWrapper, StarIcon } from '@/components'
 import { BsFileEarmarkPerson, BsWhatsapp } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
+import Link from 'next/link'
 
 const page = () => {
   const t = useTranslations('About')
@@ -240,14 +241,14 @@ const page = () => {
                 >
                   <FaLinkedinIn />
                 </a>
-                <a
-                  href='https://be-graphic.net/docs/CV-2023-Liz-Salcedo.pdf'
+                <Link
+                  href={t('cv-link')}
                   className='bg-white p-2 lg:p-3 rounded-full text-orange text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
                   rel='nofollow'
                   target='_blank'
                 >
                   <BsFileEarmarkPerson />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
