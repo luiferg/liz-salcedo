@@ -32,7 +32,6 @@ export default async function LocaleLayout({ children, params: { locale } }) {
       </Head>
       <body className='overflow-x-hidden bg-white'>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>

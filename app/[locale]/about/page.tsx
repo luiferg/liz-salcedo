@@ -166,7 +166,7 @@ const page = () => {
           animate={{ opacity: 1, x: 0, transition: { delay: 2.9 } }}
           className='bg-blue-400 lg:h-full lg:w-[47vw] p-8'
         >
-          <div className='font-primary text-white flex flex-col h-full justify-center px-[calc(10%)]'>
+          <div className='font-primary text-white flex flex-col h-full justify-center lg:px-[calc(10%)]'>
             <div className='flex flex-col gap-2 lg:gap-3 2xl:gap-5 text-sm md:text-xl lg:text-xl'>
               <h2 className='font-secondary text-xl md:text-2xl lg:text-3xl'>
                 {t('experience')}

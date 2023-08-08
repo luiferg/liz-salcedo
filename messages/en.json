@@ -160,5 +160,13 @@
   "ContactModal": {
     "success": "Great!",
     "message": "Message has been sent successfully!"
+  },
+  "Footer": {
+    "contact-btn": "Get in touch!",
+    "home": "Home",
+    "about": "About me",
+    "web-design": "Web design",
+    "developer": "Developed by ",
+    "rights": " All rights reserved "
   }
 }

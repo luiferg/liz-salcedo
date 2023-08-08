@@ -1,6 +1,7 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { Footer, Navbar } from '.'
 
 const PageWrapper = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false)
@@ -39,6 +40,7 @@ const PageWrapper = ({ children }) => {
     : animationVariants.desktop
   return (
     <AnimatePresence mode='wait'>
+      <Navbar />
       <motion.div
         key='wrapper'
         initial={animation.initial}
@@ -47,6 +49,7 @@ const PageWrapper = ({ children }) => {
         className='bg-white'
       >
         {children}
+        <Footer />
       </motion.div>
     </AnimatePresence>
   )
