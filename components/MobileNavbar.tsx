@@ -27,7 +27,7 @@ const MobileNavbar = () => {
   return (
     <header>
       <AnimatePresence>
-        <nav className='visible z-10'>
+        <nav className='visible lg:invisible z-10'>
           <div className='bg-white w-screen px-10 sm:px-16 py-3'>
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
               <LanguageSwitcher />
