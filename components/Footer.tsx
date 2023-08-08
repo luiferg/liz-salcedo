@@ -1,13 +1,35 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BsFileEarmarkPerson, BsWhatsapp } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { RxArrowRight } from 'react-icons/rx'
 import { useTranslations } from 'next-intl'
+import { useEffect, useState } from 'react'
+
 const Footer = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1023)
+    }
+
+    if (typeof window !== 'undefined') {
+      handleResize() // Initial check
+      window.addEventListener('resize', handleResize) // Listen for resize events
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize) // Clean up the listener
+      }
+    }
+  }, [])
+
   const t = useTranslations('Footer')
-  return (
-    <footer className='h-fit p-8 flex flex-col justify-center w-screen font-primary bg-pink text-white text-sm'>
+  return isMobile ? (
+    <footer className='h-fit p-8 flex flex-col justify-center w-screen font-primary bg-pink text-white text-sm md:text-base lg:text-xl'>
       <div className='flex flex-row w-full h-full justify-center gap-7 sm:gap-16 items-center'>
         <div className='flex flex-col gap-3 sm:gap-6 h-full w-[50%] sm:w-fit'>
           <Link href='/'>
@@ -16,7 +38,7 @@ const Footer = () => {
               width={200}
               height={100}
               alt='be-graphic footer logo'
-              className='w-32 h-auto'
+              className='w-32 h-auto lg:w-52'
             />
           </Link>
           <Link
@@ -74,6 +96,8 @@ const Footer = () => {
         Copyright &copy; 2023 Be-Graphic.{t('rights')}
       </div>
     </footer>
+  ) : (
+    ''
   )
 }
 
