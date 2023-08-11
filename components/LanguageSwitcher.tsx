@@ -1,9 +1,8 @@
 'use client'
-import { useRouter, usePathname } from 'next-intl/client'
+import { usePathname } from 'next-intl/client'
 import Link from 'next-intl/link'
 
 const LanguageSwitcher = () => {
-  const router = useRouter()
   const pathname = usePathname()
 
   return (
