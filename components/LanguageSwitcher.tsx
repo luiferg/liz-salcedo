@@ -1,5 +1,6 @@
 'use client'
 import { useRouter, usePathname } from 'next-intl/client'
+import Link from 'next-intl/link'
 
 const LanguageSwitcher = () => {
   const router = useRouter()
@@ -7,21 +8,13 @@ const LanguageSwitcher = () => {
 
   return (
     <div className='flex justify-between gap-3 font-primary font-semibold font-lg text-blue-400'>
-      <button
-        onClick={() => {
-          router.push(pathname, { locale: 'es' })
-        }}
-      >
+      <Link href={pathname} locale='es'>
         ES
-      </button>
+      </Link>
       |
-      <button
-        onClick={() => {
-          router.push(pathname, { locale: 'en' })
-        }}
-      >
+      <Link href={pathname} locale='en'>
         EN
-      </button>
+      </Link>
     </div>
   )
 }
