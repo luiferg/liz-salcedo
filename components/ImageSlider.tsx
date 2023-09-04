@@ -53,7 +53,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
     <>
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
-          className='absolute h-full w-screen'
+          className='absolute h-full w-screen max-w-[1920px] max-h-[1080px]'
           key={page}
           custom={direction}
           variants={variants}

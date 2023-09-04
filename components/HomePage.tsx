@@ -73,8 +73,8 @@ const HomePage = () => {
         </div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen relative'>
-            <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
               <Image
                 src='/aguda-navaja.webp'
                 fill
@@ -88,7 +88,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className='h-full w-screen bg-white flex p-28 justify-center items-center'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'>
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <p className='font-secondary text-blue-400 text-7xl'>
                 {t('greetings')}
@@ -104,8 +104,8 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div className='h-full w-screen relative'>
-            <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
               <Image
                 src='/gopass.webp'
                 fill

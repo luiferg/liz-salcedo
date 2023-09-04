@@ -30,7 +30,7 @@ const DesktopNavbar = () => {
     <header>
       <AnimatePresence>
         <nav className='fixed invisible lg:visible z-10 min-lg'>
-          <div className='bg-white lg:w-[6vw] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'>
+          <div className='bg-white lg:w-[6vw] lg:max-w-[150px] px-10 py-3 lg:px-0 lg:py-16 lg:h-screen'>
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
               <Link
                 href='/'

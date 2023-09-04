@@ -46,7 +46,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/digital-design/industrialbox-slide-1.webp'
               height={756}
@@ -128,7 +128,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/digital-design/industrialbox-slide-1.webp'
               fill
@@ -137,7 +137,7 @@ const page = () => {
               alt='industrialbox be-graphic'
               className='object-left object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-end relative font-primary text-[#000000]'>
+            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] flex flex-col justify-end relative font-primary text-[#000000]'>
               <div className='pl-[10vw] pb-[10vh]'>
                 <div className='overflow-hidden'>
                   <motion.h1
@@ -176,7 +176,7 @@ const page = () => {
           </div>
           <div
             ref={ref}
-            className='h-full w-screen bg-white flex p-28 justify-center items-center'
+            className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
           >
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>

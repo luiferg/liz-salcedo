@@ -28,32 +28,30 @@ const MobileNavbar = () => {
     <header>
       <AnimatePresence>
         <nav className='visible lg:invisible z-10'>
-          <div className='bg-white w-screen px-10 sm:px-16 py-3'>
-            <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
-              <LanguageSwitcher />
-              <Link href='/'>
-                <Image
-                  src='/logo.svg'
-                  priority
-                  width={60}
-                  height={60}
-                  alt='Be Graphic logo'
-                  className='static'
-                />
-              </Link>
-              <div>
-                <motion.button
-                  whileTap={{
-                    scale: 0.9,
-                    transition: { duration: 0.2, type: 'spring' },
-                  }}
-                  className='h-12 w-12 bg-white rounded-full flex flex-col justify-center items-center'
-                  onClick={openMenu}
-                  type='button'
-                >
-                  <RxHamburgerMenu className='text-blue-400 text-3xl' />
-                </motion.button>
-              </div>
+          <div className='bg-white w-screen flex flex-row justify-between items-center relative p-3 sm:px-16'>
+            <LanguageSwitcher />
+            <Link href='/' className='absolute left-1/2 -translate-x-1/2'>
+              <Image
+                src='/logo.svg'
+                priority
+                width={60}
+                height={60}
+                alt='Be Graphic logo'
+                className='static'
+              />
+            </Link>
+            <div>
+              <motion.button
+                whileTap={{
+                  scale: 0.9,
+                  transition: { duration: 0.2, type: 'spring' },
+                }}
+                className='h-12 w-12 bg-white rounded-full flex flex-col justify-center items-center'
+                onClick={openMenu}
+                type='button'
+              >
+                <RxHamburgerMenu className='text-blue-400 text-3xl' />
+              </motion.button>
             </div>
           </div>
         </nav>

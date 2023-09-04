@@ -37,7 +37,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/web-design/teaspoon-slide-1.webp'
               height={756}
@@ -47,7 +47,7 @@ const page = () => {
               alt='teaspoon be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen absolute top-0 flex flex-col justify-start items-center font-primary text-white'>
+            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] absolute top-0 flex flex-col justify-start items-center font-primary text-white'>
               <div className='flex flex-col pt-2 justify-center items-center'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -107,7 +107,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/web-design/teaspoon-slide-2.webp'
               height={756}
@@ -121,7 +121,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/web-design/teaspoon-slide-1.webp'
               fill
@@ -130,7 +130,7 @@ const page = () => {
               alt='teaspoon be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen flex flex-col justify-start items-center relative font-primary text-white'>
+            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] flex flex-col justify-start items-center relative font-primary text-white'>
               <div className='flex flex-col pt-[3vh] justify-center items-center'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -164,7 +164,7 @@ const page = () => {
           </div>
           <div
             ref={ref}
-            className='h-full w-screen bg-white flex p-28 justify-center items-center'
+            className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
           >
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>
@@ -194,7 +194,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/web-design/teaspoon-slide-2.webp'
               fill
