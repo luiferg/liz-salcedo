@@ -2,8 +2,11 @@
 import React, { useRef, useState, useLayoutEffect, useCallback } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
+type PageContainerProps = {
+  children: React.ReactNode
+}
 
-const PageContainer = ({ children }) => {
+const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
   const scrollRef = useRef(null)
   const ghostRef = useRef(null)
   const [scrollRange, setScrollRange] = useState(0)
@@ -38,7 +41,7 @@ const PageContainer = ({ children }) => {
           style={{ x: spring }}
           className='relative h-screen w-screen flex items-center'
         >
-          <div id='slides' className='flex h-full'>
+          <div id='slides' className='flex h-full items-center'>
             {children}
           </div>
         </motion.section>

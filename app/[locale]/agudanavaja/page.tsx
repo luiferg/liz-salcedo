@@ -142,7 +142,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='w-screen h-screen relative'>
             <Image
               src='/editorial-design/agudanavaja-slide-1.webp'
               fill
@@ -206,7 +206,7 @@ const page = () => {
           </div>
           <div
             ref={ref}
-            className='h-full w-screen max-w-[1920px] max-h-[1080px] max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
+            className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
           >
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>
@@ -235,7 +235,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] max-w-[1920px] max-h-[1080px] relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/editorial-design/agudanavaja-slide-2.webp'
               fill
