@@ -38,7 +38,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/digital-design/aurora-slide-1.webp'
               height={756}
@@ -156,7 +156,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/digital-design/aurora-slide-2.webp'
               height={756}

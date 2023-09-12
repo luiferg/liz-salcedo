@@ -37,7 +37,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/web-design/tonaypepo-slide-1.webp'
               height={756}
@@ -47,7 +47,7 @@ const page = () => {
               alt='tonaypepo be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] absolute top-0 flex flex-col font-primary text-white'>
+            <div className='h-full w-screen absolute top-0 flex flex-col font-primary text-white'>
               <div className='flex flex-col pt-2 sm:pt-4 pl-6 sm:pl-10'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -70,7 +70,7 @@ const page = () => {
                       initial={{ y: 100, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.3, type: 'tween', delay: 0.6 }}
-                      className='text-white font-light'
+                      className='font-light'
                     >
                       {t('li-1-1')}
                       <b className='font-medium'>{t('li-1-2')}</b>
@@ -109,7 +109,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/web-design/tonaypepo-slide-2.webp'
               height={756}

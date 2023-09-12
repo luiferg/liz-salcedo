@@ -37,7 +37,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/web-design/leaobranco-slide-1.webp'
               height={756}
@@ -47,7 +47,7 @@ const page = () => {
               alt='leaobranco be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] absolute top-0 flex flex-col font-primary text-white'>
+            <div className='h-full w-screen absolute top-0 flex flex-col font-primary'>
               <div className='flex flex-col pt-2 sm:pt-4 pl-6 sm:pl-10'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -110,7 +110,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/web-design/leaobranco-slide-2.webp'
               height={756}

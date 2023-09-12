@@ -37,7 +37,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/editorial-design/agudanavaja-slide-1.webp'
               height={756}
@@ -128,7 +128,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/editorial-design/agudanavaja-slide-2.webp'
               height={756}
@@ -142,7 +142,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] max-w-[1920px] max-h-[1080px] relative'>
+          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
             <Image
               src='/editorial-design/agudanavaja-slide-1.webp'
               fill
@@ -151,7 +151,7 @@ const page = () => {
               alt='agudanavaja be-graphic'
               className='object-center object-cover'
             />
-            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] max-w-[1920px] max-h-[1080px] flex flex-col justify-start items-start relative font-primary text-[#000000]'>
+            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] flex flex-col justify-start items-start relative font-primary text-[#000000]'>
               <div className='flex flex-col ml-[10vw] pt-[4vh] 2xl:pt-[6vh]'>
                 <div className='overflow-hidden'>
                   <motion.div

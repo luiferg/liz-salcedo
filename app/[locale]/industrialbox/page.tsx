@@ -46,7 +46,7 @@ const page = () => {
           transition={{ duration: 0.3, type: 'tween' }}
           className='visible lg:invisible'
         >
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='relative'>
             <Image
               src='/digital-design/industrialbox-slide-1.webp'
               height={756}
@@ -122,7 +122,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='aspect-video w-screen relative flex'>
+          <div className='aspect-video w-screen relative'>
             <ImageSlider images={images} />
           </div>
         </motion.div>
