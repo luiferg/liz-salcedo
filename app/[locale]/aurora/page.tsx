@@ -170,7 +170,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='lg:h-screen w-screen relative'>
             <Image
               src='/digital-design/aurora-slide-1.webp'
               fill
@@ -179,7 +179,7 @@ const page = () => {
               alt='aurora be-graphic'
               className='object-right object-cover'
             />
-            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] flex flex-col justify-end relative font-primary text-white'>
+            <div className='lg:h-screen w-screen flex flex-col justify-end relative font-primary text-white'>
               <div className='bottom-[30vh] absolute right-[calc(10%-20px)] flex flex-col gap-5 2xl:gap-8'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -260,7 +260,7 @@ const page = () => {
           </div>
           <div
             ref={ref}
-            className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
+            className='lg:h-screen w-screen bg-white flex p-28 justify-center items-center'
           >
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>
@@ -290,7 +290,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='lg:h-screen w-screen relative'>
             <Image
               src='/digital-design/aurora-slide-2.webp'
               fill

@@ -10,7 +10,7 @@ import { LanguageSwitcher } from '.'
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const menuSpan =
-    'block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white'
+    'block max-w-0 group-lg:hover:max-w-full transition-all duration-300 h-0.5 bg-white'
   const ulStyle = 'list-none text-base md:text-xl flex flex-col gap-[2px]'
   const openMenu = useCallback(() => {
     setIsOpen(true)
@@ -298,7 +298,7 @@ const MobileNavbar = () => {
                         <span className={`${menuSpan}`}></span>
                       </Link>
                     </h3>
-                    <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
+                    <RxArrowRight className='text-xl group-lg:hover:translate-x-1 transition-all' />
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-xl md:text-3xl font-bold'>
@@ -311,7 +311,7 @@ const MobileNavbar = () => {
                         <span className={`${menuSpan}`}></span>
                       </Link>
                     </h3>
-                    <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
+                    <RxArrowRight className='text-xl group-lg:hover:translate-x-1 transition-all' />
                   </div>
                 </div>
 
@@ -333,7 +333,7 @@ const MobileNavbar = () => {
                   onClick={closeMenu}
                   type='button'
                 >
-                  <RxCross1 className='group-hover:scale-125 text-white text-3xl transition-all' />
+                  <RxCross1 className='group-lg:hover:scale-125 text-white text-3xl transition-all' />
                 </motion.button>
               </motion.div>
             </div>

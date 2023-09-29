@@ -88,7 +88,7 @@ const ContactForm = () => {
         <div>
           <button
             type='submit'
-            className='bg-pink p-2 lg:p-3 w-fit rounded-xl font-semibold text-white flex items-center gap-1 hover:scale-110 active:scale-100 transition-all duration-300'
+            className='bg-pink p-2 lg:p-3 w-fit rounded-xl font-semibold text-white flex items-center gap-1 lg:hover:scale-110 active:scale-100 transition-all duration-300'
           >
             {t('submit')}
             <BsSend />

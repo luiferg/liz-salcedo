@@ -26,7 +26,7 @@ const SuccessModal = ({ showModal, setShowModal }: SuccessModalProps) => {
             <button
               onClick={() => setShowModal(false)}
               type='reset'
-              className='bg-pink py-2 px-5 lg:px-7 w-fit rounded-xl font-semibold text-white hover:scale-110 active:scale-100 transition-all duration-300'
+              className='bg-pink py-2 px-5 lg:px-7 w-fit rounded-xl font-semibold text-white lg:hover:scale-110 active:scale-100 transition-all duration-300'
             >
               Ok
             </button>

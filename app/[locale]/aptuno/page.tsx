@@ -139,7 +139,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='lg:h-screen w-screen relative'>
             <Image
               src='/editorial-design/aptuno-slide-1.webp'
               fill
@@ -148,7 +148,7 @@ const page = () => {
               alt='aptuno be-graphic'
               className='object-left object-cover'
             />
-            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] flex flex-col justify-end items-start relative font-primary text-[#000000]'>
+            <div className='lg:h-screen w-screen flex flex-col justify-end items-start relative font-primary text-[#000000]'>
               <div className='flex flex-col ml-[9vw] pb-[4vh] 2xl:pb-[8vh]'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -198,7 +198,7 @@ const page = () => {
           </div>
           <div
             ref={ref}
-            className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
+            className='lg:h-screen w-screen bg-white flex p-28 justify-center items-center'
           >
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>
@@ -227,7 +227,7 @@ const page = () => {
               </motion.div>
             </div>
           </div>
-          <div className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'>
+          <div className='lg:h-screen w-screen relative'>
             <Image
               src='/editorial-design/aptuno-slide-2.webp'
               fill

@@ -12,7 +12,7 @@ const DesktopNavbar = () => {
   const [src, setSrc] = useState('')
   const [isVisible, setIsVisible] = useState(false)
   const menuSpan =
-    'block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white'
+    'block max-w-0 group-lg:hover:max-w-full transition-all duration-300 h-0.5 bg-white'
   const ulStyle = 'list-none text-xl flex flex-col gap-1 2xl:gap-2'
   const openMenu = useCallback(() => {
     setIsOpen(true)
@@ -34,7 +34,7 @@ const DesktopNavbar = () => {
             <div className='flex flex-row h-full w-full lg:flex-col justify-between items-center'>
               <Link
                 href='/'
-                className='hover:scale-110 transition-all active:scale-100 duration-300'
+                className='lg:hover:scale-110 transition-all active:scale-100 duration-300'
               >
                 <Image
                   src='/logo.svg'
@@ -48,7 +48,7 @@ const DesktopNavbar = () => {
               <div className='flex flex-col justify-center items-center gap-4'>
                 <LanguageSwitcher />
                 <button
-                  className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center hover:scale-110 transition-all active:scale-100 duration-300'
+                  className='h-12 w-12 bg-blue-400 rounded-full flex flex-col justify-center items-center lg:hover:scale-110 transition-all active:scale-100 duration-300'
                   onClick={openMenu}
                   type='button'
                 >
@@ -397,7 +397,7 @@ const DesktopNavbar = () => {
                         <span className={`${menuSpan}`}></span>
                       </Link>
                     </h3>
-                    <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
+                    <RxArrowRight className='text-xl group-lg:hover:translate-x-1 transition-all' />
                   </div>
                   <div className='text-white flex flex-row items-center gap-1 group'>
                     <h3 className='text-xl font-bold'>
@@ -410,7 +410,7 @@ const DesktopNavbar = () => {
                         <span className={`${menuSpan}`}></span>
                       </Link>
                     </h3>
-                    <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
+                    <RxArrowRight className='text-xl group-lg:hover:translate-x-1 transition-all' />
                   </div>
                 </div>
 
@@ -432,7 +432,7 @@ const DesktopNavbar = () => {
                   onClick={closeMenu}
                   type='button'
                 >
-                  <RxCross1 className='group-hover:scale-125 text-white text-3xl transition-all' />
+                  <RxCross1 className='group-lg:hover:scale-125 text-white text-3xl transition-all' />
                 </motion.button>
               </motion.div>
             </div>

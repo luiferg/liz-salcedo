@@ -135,10 +135,7 @@ const page = () => {
         </motion.div>
       ) : (
         <PageContainer>
-          <div
-            className='h-full w-screen max-w-[1920px] max-h-[1080px] relative'
-            key='compensarDesktop'
-          >
+          <div className='lg:h-screen w-screen relative' key='compensarDesktop'>
             <Image
               src='/digital-design/compensar-slide-1.webp'
               fill
@@ -147,7 +144,7 @@ const page = () => {
               alt='compensar be-graphic'
               className='object-left object-cover'
             />
-            <div className='h-full w-screen max-w-[1920px] max-h-[1080px] flex flex-col justify-end relative font-primary text-[#222221] font-medium'>
+            <div className='lg:h-screen w-screen flex flex-col justify-end relative font-primary text-[#222221] font-medium'>
               <div className='pl-[10vw] pb-[calc(18%-30px)] gap-4 flex flex-col'>
                 <div className='overflow-hidden'>
                   <motion.div
@@ -190,7 +187,7 @@ const page = () => {
           </div>
           <div
             ref={ref}
-            className='h-full w-screen max-w-[1920px] max-h-[1080px] bg-white flex p-28 justify-center items-center'
+            className='lg:h-screen w-screen bg-white flex p-28 justify-center items-center'
           >
             <div className='flex flex-col gap-6 text-center w-[50%] flex-wrap'>
               <div className='overflow-hidden'>

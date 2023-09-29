@@ -43,10 +43,10 @@ const Footer = () => {
           </Link>
           <Link
             href='/contact'
-            className='group px-2 py-1 bg-white font-primary text-sm md:text-base lg:text-xl rounded-full hover:scale-110 transition-all active:scale-100 duration-300 text-pink font-medium flex flex-row items-center gap-1 lg:gap-2 w-fit'
+            className='group px-2 py-1 bg-white font-primary text-sm md:text-base lg:text-xl rounded-full lg:hover:scale-110 transition-all active:scale-100 duration-300 text-pink font-medium flex flex-row items-center gap-1 lg:gap-2 w-fit'
           >
             {t('contact-btn')}
-            <RxArrowRight className='text-xl group-hover:translate-x-1 transition-all' />
+            <RxArrowRight className='text-xl group-lg:hover:translate-x-1 transition-all' />
           </Link>
         </div>
         <div className='w-[40%] sm:w-fit'>
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className='flex flex-col gap-1 sm:gap-2 w-[10%] sm:w-fit'>
           <a
             href='https://wa.me/34666615881'
-            className=' p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
+            className=' p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl lg:hover:scale-110 transition-all active:scale-100 duration-300'
             rel='nofollow'
             target='_blank'
           >
@@ -76,7 +76,7 @@ const Footer = () => {
           </a>
           <a
             href='https://www.linkedin.com/in/lizeth-salcedo-vergara-755644160/'
-            className='p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
+            className='p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl lg:hover:scale-110 transition-all active:scale-100 duration-300'
             rel='nofollow'
             target='_blank'
           >
@@ -84,7 +84,7 @@ const Footer = () => {
           </a>
           <Link
             href={t('cv-link')}
-            className='p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
+            className='p-2 lg:p-3 rounded-full text-white text-xl md:text-2xl lg:text-3xl lg:hover:scale-110 transition-all active:scale-100 duration-300'
             rel='nofollow'
             target='_blank'
           >

@@ -227,7 +227,7 @@ const page = () => {
               <div className='flex flex-row gap-[calc(20%-5px)] w-full px-8 justify-center lg:justify-normal py-4'>
                 <a
                   href='https://wa.me/34666615881'
-                  className='bg-white p-2 lg:p-3 rounded-full text-yellow text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
+                  className='bg-white p-2 lg:p-3 rounded-full text-yellow text-xl md:text-2xl lg:text-3xl lg:hover:scale-110 transition-all active:scale-100 duration-300'
                   rel='nofollow'
                   target='_blank'
                 >
@@ -235,7 +235,7 @@ const page = () => {
                 </a>
                 <a
                   href='https://www.linkedin.com/in/lizeth-salcedo-vergara-755644160/'
-                  className='bg-white p-2 lg:p-3 rounded-full text-pink text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
+                  className='bg-white p-2 lg:p-3 rounded-full text-pink text-xl md:text-2xl lg:text-3xl lg:hover:scale-110 transition-all active:scale-100 duration-300'
                   rel='nofollow'
                   target='_blank'
                 >
@@ -243,7 +243,7 @@ const page = () => {
                 </a>
                 <Link
                   href={t('cv-link')}
-                  className='bg-white p-2 lg:p-3 rounded-full text-orange text-xl md:text-2xl lg:text-3xl hover:scale-110 transition-all active:scale-100 duration-300'
+                  className='bg-white p-2 lg:p-3 rounded-full text-orange text-xl md:text-2xl lg:text-3xl lg:hover:scale-110 transition-all active:scale-100 duration-300'
                   rel='nofollow'
                   target='_blank'
                 >
